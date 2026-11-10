@@ -172,8 +172,42 @@ nav .btn{width:100%;margin-top:18px}
 .cal-r .w span{display:block;color:var(--muted);font-size:.94rem;padding-left:18px}
 @media (min-width:900px){.how-grid{grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}}
 
+/* goals */
+.for{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.for a{display:inline-flex;align-items:center;min-height:38px;padding:0 14px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem}
+.for a:hover{border-color:var(--blue);color:var(--blue)}
+.for a em{font-style:normal;font-size:.76rem;font-weight:700;color:var(--red);margin-left:6px}
+.goals{background:var(--soft)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chips button{min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink);font:700 .98rem var(--body);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.chips button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.chips em{font-style:normal;font-size:.76rem;font-weight:700;color:var(--red);margin-left:6px}
+.chips button[aria-selected="true"] em{color:#ffb9b9}
+.gpanel{margin-top:16px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 20px;box-shadow:0 26px 50px -36px rgba(15,26,51,.45);display:grid;gap:20px;grid-template-areas:"head" "rows" "foot"}
+.ghead{grid-area:head;min-width:0}
+.grows{grid-area:rows;min-width:0;display:grid;gap:18px;align-content:start}
+.gfoot{grid-area:foot;min-width:0;padding-top:18px;border-top:1px solid var(--line);display:grid;gap:14px}
+.ghead h3{font-size:1.55rem;letter-spacing:-.02em;line-height:1.12}
+.ghead .lead{color:var(--muted);margin-top:10px;max-width:52ch}
+.gfacts{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.gfacts li{position:relative;padding-left:22px}
+.gfacts li::before{content:"";position:absolute;left:0;top:.68em;width:12px;height:2.5px;border-radius:2px;background:var(--red)}
+.grow{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start}
+.grow .who{width:42px;height:42px;font-size:.84rem}
+.grow b{display:block;font-family:var(--display);font-weight:800}
+.grow span.tx{color:var(--muted)}
+.gfoot .pk small{display:block;color:var(--muted);font-size:.9rem;font-weight:600}
+.gfoot .pk b{font:800 1.22rem var(--display)}
+.gfoot .btn{width:100%}
+@media (min-width:900px){
+  .gpanel{padding:36px 40px;gap:26px 64px;grid-template-columns:1fr 1fr;grid-template-areas:"head rows" "foot rows"}
+  .ghead h3{font-size:1.9rem}
+  .gfoot{align-self:end;grid-template-columns:1fr auto;align-items:center}
+  .gfoot .btn{width:auto}
+}
+
 /* quiz */
-.quiz{background:var(--soft)}
+.quiz{background:var(--paper)}
 .quiz-grid{display:grid;gap:28px}
 .quiz-grid > div{min-width:0}
 .qcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 20px 24px;box-shadow:0 26px 50px -36px rgba(15,26,51,.45)}
@@ -332,6 +366,7 @@ footer{color:var(--muted);font-size:.93rem;border-top:1px solid var(--line)}
     <button class="burger" id="burger" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
     <nav id="menu" aria-label="Ana menü">
       <a class="l" href="#nasil">Nasıl işliyor</a>
+      <a class="l" href="#programlar">Programlar</a>
       <a class="l" href="#test">Seviye testi</a>
       <a class="l" href="#fiyat">Fiyatlar</a>
       <a class="l" href="#sss">Sorular</a>
@@ -350,6 +385,9 @@ footer{color:var(--muted);font-size:.93rem;border-top:1px solid var(--line)}
       <div class="cta" id="heroCta">
         <a class="btn" href="#iletisim">Ücretsiz seviye görüşmesi</a>
         <p class="hint">Birebir dersler <b class="num">aylık 3.900 TL</b>, taahhüt yok.</p>
+      </div>
+      <div class="for" aria-label="Programlar">
+        <a href="#gunluk">Günlük konuşma</a><a href="#is">İş İngilizcesi</a><a href="#toefl">TOEFL iBT<em>yeni format</em></a><a href="#ielts">IELTS</a><a href="#yds">YDS / YÖKDİL</a>
       </div>
     </div>
     <div class="art">
@@ -401,6 +439,17 @@ footer{color:var(--muted);font-size:.93rem;border-top:1px solid var(--line)}
   </div>
 </section>
 
+<section class="goals sec" id="programlar">
+  <div class="wrap">
+    <h2>Ne için öğreniyorsun?</h2>
+    <p class="intro">Model aynı, içerik hedefine göre değişiyor. Seninkini seç.</p>
+    <div class="chips" id="chips" role="tablist" aria-label="Hedefler"></div>
+    <div class="gpanel" id="gpanel" role="tabpanel" aria-live="polite">
+      <noscript>Günlük konuşma, iş İngilizcesi, TOEFL iBT, IELTS, YDS / YÖKDİL ve şirketler için programlarımız var.</noscript>
+    </div>
+  </div>
+</section>
+
 <section class="quiz sec" id="test">
   <div class="wrap quiz-grid">
     <div>
@@ -442,13 +491,18 @@ footer{color:var(--muted);font-size:.93rem;border-top:1px solid var(--line)}
         <p>Haftada 3 ders Türk hoca, 1 sohbet. Sınavı ya da iş görüşmesi yaklaşanlar için.</p>
         <p class="tot num" hidden></p>
       </div>
+      <div class="item">
+        <div class="item-top"><h3>TOEFL / IELTS paketi</h3><span class="dots"></span><span class="pr num" data-m="7900">7.900 TL</span></div>
+        <p>Haftada 2 ders Türk hoca (60 dakika), 1 konuşma provası, her hafta yazılı yazma geri bildirimi, ayda 1 tam deneme.</p>
+        <p class="tot num" hidden></p>
+      </div>
       <div class="item free">
         <div class="item-top"><h3>Konuşma kulübü</h3><span class="dots"></span><span class="pr">ücretsiz</span></div>
         <p>Kayıtlı herkes için, haftada bir akşam, en fazla 8 kişi.</p>
       </div>
     </div>
     <div class="terms">
-      <p>Fiyatlar aylık ve herkes için aynı. Genel İngilizce, iş İngilizcesi, YDS / YÖKDİL ve IELTS hazırlığı aynı fiyattan.</p>
+      <p>Fiyatlar aylık ve herkes için aynı. Günlük konuşma, iş İngilizcesi ve YDS / YÖKDİL hazırlığı ilk dört programda aynı fiyattan.</p>
       <p><b>Bırakmak istediğin ay bize yazman yeterli,</b> sonraki ay ödeme alınmaz. Kayıt olduğun fiyat 12 ay boyunca değişmez. Peşin ödeyip yarıda bırakırsan kalan ayları iade ederiz. 24 saat önceden haber verdiğin dersi başka güne alırız.</p>
     </div>
   </div>
@@ -516,6 +570,7 @@ footer{color:var(--muted);font-size:.93rem;border-top:1px solid var(--line)}
     <h2>Sorular</h2>
     <div class="faq-list">
       <details><summary>Türk hocayla ders almak beni geri bırakmaz mı?</summary><p>Konuşma pratiğini zaten yabancı partnerinle yapıyorsun. Türk hoca, Türklerin tipik hatalarını Türkçe üzerinden açıklayabildiği için özellikle başlangıç ve orta seviyede işini hızlandırır.</p></details>
+      <details><summary>TOEFL değişti, programınız yeni formata göre mi?</summary><p>Evet. TOEFL iBT Ocak 2026'da değişti. Puan artık 1 ile 6 arasında veriliyor, okuma ve dinleme bölümleri verdiğin cevaplara göre zorlaşıyor ve yeni soru tipleri var. Derslerimiz ve denemelerimiz bu formata göre.</p></details>
       <details><summary>Bir seviyeyi bitirmek ne kadar sürer?</summary><p>Haftada iki ders ve düzenli ödevle, A1 ve A2 yaklaşık üçer ay, B1 dört ay, B2 beş ay, C1 altı ay sürüyor. Sana özel tahmini seviye görüşmesinde veriyoruz.</p></details>
       <details><summary>Dersler nerede, hangi saatlerde?</summary><p>Google Meet ya da Zoom üzerinden, bilgisayardan veya telefondan. Hafta içi 07.00 ile 23.00, hafta sonu 09.00 ile 21.00 arasında saat seçebilirsin.</p></details>
       <details><summary>Sertifika veriyor musunuz?</summary><p>Her seviyenin sonunda seviye sınavı sonucunla birlikte katılım belgesi veriyoruz. IELTS gibi resmi bir sınav sertifikasının yerine geçmez.</p></details>
@@ -541,8 +596,9 @@ footer{color:var(--muted);font-size:.93rem;border-top:1px solid var(--line)}
             <select id="hedef" name="hedef">
               <option>Günlük konuşma</option>
               <option>İş İngilizcesi</option>
+              <option>TOEFL iBT</option>
+              <option>IELTS</option>
               <option>YDS / YÖKDİL</option>
-              <option>IELTS / yurt dışı</option>
               <option>Şirketim için</option>
             </select>
           </label>
@@ -568,7 +624,7 @@ footer{color:var(--muted);font-size:.93rem;border-top:1px solid var(--line)}
 <footer>
   <div class="wrap foot">
     <a class="logo" href="#top" aria-label="Duet English ana sayfa"><span class="mk" aria-hidden="true"></span><b>duet</b></a>
-    <div class="links"><a href="#nasil">Nasıl işliyor</a><a href="#test">Seviye testi</a><a href="#fiyat">Fiyatlar</a><a href="#sss">Sorular</a><a href="#iletisim">Seviye görüşmesi</a></div>
+    <div class="links"><a href="#nasil">Nasıl işliyor</a><a href="#programlar">Programlar</a><a href="#test">Seviye testi</a><a href="#fiyat">Fiyatlar</a><a href="#sss">Sorular</a><a href="#iletisim">Seviye görüşmesi</a></div>
     <span>© 2026 Duet English</span>
   </div>
 </footer>
@@ -623,6 +679,55 @@ footer{color:var(--muted);font-size:.93rem;border-top:1px solid var(--line)}
     $("nbWhy").textContent = e.why;
     nb.classList.remove("play"); void nb.offsetWidth; nb.classList.add("play");
   });
+
+  /* hedef seçici */
+  var G = {
+    gunluk:{n:"Günlük konuşma", f:"Günlük konuşma", h:"Konuşurken donup kalmamak için", l:"Tatilde, yeni biriyle tanışırken ya da yabancı bir arkadaşınla konuşurken aklındakini söyleyebilmen için.",
+      t:"En çok kullanılan kalıpları ve senin en sık yaptığın hataları Türkçe üzerinden oturtur.", p:"Her hafta gerçek bir durumu oynarsınız: restoran, havaalanı, ev sahibiyle konuşma.", pk:"Birebir + konuşma", pr:"5.200 TL / ay"},
+    is:{n:"İş İngilizcesi", f:"İş İngilizcesi", h:"Toplantıda söz almak, e-postayı çekinmeden göndermek için", l:"Kendi işinden örneklerle çalışırsın. Gönderdiğin gerçek e-postaları derse getirebilirsin.",
+      t:"E-posta kalıpları, toplantı dili ve sunum yapısı. Yazdıklarını birlikte düzeltirsiniz.", p:"Toplantı, mülakat ve müşteri görüşmesi provası yaptırır.", pk:"Birebir + konuşma", pr:"5.200 TL / ay"},
+    toefl:{n:"TOEFL iBT", tag:"yeni format", f:"TOEFL iBT", h:"TOEFL Ocak 2026'da değişti", l:"Eski formata göre yazılmış kitap ve videolar bu sınavı anlatmıyor. Programımız yeni formata göre.",
+      facts:["Puan artık 1 ile 6 arasında veriliyor.","Okuma ve dinleme, verdiğin cevaplara göre zorlaşıyor.","Yeni soru tipleri eklendi.","Sonuç 72 saat içinde açıklanıyor."],
+      t:"Her bölümün stratejisini çalıştırır, yazma görevlerine her hafta yazılı geri bildirim verir.", p:"Konuşma bölümünün provasını süre tutarak yaptırır.", pk:"TOEFL / IELTS paketi", pr:"7.900 TL / ay"},
+    ielts:{n:"IELTS", f:"IELTS", h:"Hedef bandına göre plan", l:"Yurt dışı başvurusu, yüksek lisans ya da göç için gereken banda göre çalışırsın.",
+      t:"Writing Task 1 ve 2'yi band ölçütlerine göre değerlendirir, okuma ve dinlemede soru tiplerini çalıştırır.", p:"Speaking'in üç bölümünü gerçek sınav düzeninde prova ettirir.", pk:"TOEFL / IELTS paketi", pr:"7.900 TL / ay"},
+    yds:{n:"YDS / YÖKDİL", f:"YDS / YÖKDİL", h:"Hedefin 55 ya da 70 ise", l:"Bu sınavlar okuma, kelime, dilbilgisi ve çeviriden oluşuyor. Burada en çok işe yarayan şey sınavı bilen bir Türk hoca.",
+      t:"Soru tiplerini tek tek çalışır, her denemeden sonra hangi tipte puan kaybettiğini çıkarır.", p:"Bu sınavda konuşma yok, partner gerekmiyor. İstersen sonradan eklersin.", pk:"Birebir ya da küçük grup", pr:"3.900 TL ya da 1.900 TL / ay"},
+    kurumsal:{n:"Şirketim için", f:"Şirketim için", h:"Ekibin için aynı model, tek faturayla", l:"Beş kişi ve üzeri ekipler için. İnsan kaynaklarına her ay katılım ve ilerleme raporu gönderiyoruz.",
+      t:"Her çalışan seviye görüşmesine girer, seviyesine göre birebir ya da küçük grupta ders alır.", p:"Toplantı ve müşteri görüşmesi provaları yaptırır.", pk:"Ekibine göre teklif", pr:"Kişi sayısına göre"}
+  };
+  var GO = ["gunluk","is","toefl","ielts","yds","kurumsal"], chips = $("chips"), gpanel = $("gpanel");
+  chips.innerHTML = GO.map(function(id){ var g = G[id]; return '<button type="button" role="tab" data-g="' + id + '" aria-selected="false">' + esc(g.n) + (g.tag ? '<em>' + esc(g.tag) + '</em>' : '') + '</button>'; }).join("");
+  function drawGoal(id){
+    var g = G[id];
+    all("#chips button").forEach(function(b){ b.setAttribute("aria-selected", b.getAttribute("data-g") === id ? "true" : "false"); });
+    gpanel.innerHTML =
+      '<div class="ghead"><h3>' + esc(g.h) + '</h3><p class="lead">' + esc(g.l) + '</p>' +
+        (g.facts ? '<ul class="gfacts">' + g.facts.map(function(x){ return '<li>' + esc(x) + '</li>'; }).join("") + '</ul>' : '') + '</div>' +
+      '<div class="grows">' +
+        '<div class="grow"><span class="who t" aria-hidden="true">TR</span><div><b>Türk hocan</b><span class="tx">' + esc(g.t) + '</span></div></div>' +
+        '<div class="grow"><span class="who p" aria-hidden="true">EN</span><div><b>Konuşma partnerin</b><span class="tx">' + esc(g.p) + '</span></div></div>' +
+      '</div>' +
+      '<div class="gfoot"><div class="pk"><small>Önerdiğimiz program</small><b>' + esc(g.pk) + '</b><small class="num">' + esc(g.pr) + '</small></div>' +
+        '<a class="btn" href="#iletisim" data-f="' + esc(g.f) + '">Bu hedefle görüşme al</a></div>';
+  }
+  chips.addEventListener("click", function(ev){
+    var b = ev.target.closest("button"); if (!b) return;
+    var id = b.getAttribute("data-g"); drawGoal(id);
+    try { history.replaceState(null, "", "#" + id); } catch (e) {}
+  });
+  gpanel.addEventListener("click", function(ev){
+    var a = ev.target.closest("a[data-f]"); if (a) $("hedef").value = a.getAttribute("data-f");
+  });
+  function fromHash(){
+    var id = location.hash.slice(1);
+    if (G[id]) { drawGoal(id); $("programlar").scrollIntoView(); return true; }
+    return false;
+  }
+  drawGoal("gunluk");
+  fromHash();
+  window.addEventListener("hashchange", fromHash);
+  window.addEventListener("load", function(){ if (G[location.hash.slice(1)]) $("programlar").scrollIntoView({behavior:"instant"}); });
 
   /* seviye testi */
   var Q = [
