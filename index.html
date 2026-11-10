@@ -4,312 +4,443 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Türk hoca ve yabancı konuşma partneriyle birebir online İngilizce. Fiyatlar sitede, taahhüt yok.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%232244cc'/%3E%3Ccircle cx='20' cy='10' r='10' fill='%23cf2a31' fill-opacity='.85'/%3E%3C/svg%3E">
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}img{max-width:100%}</style>
+<meta name="theme-color" content="#ffffff">
+<meta name="color-scheme" content="light">
 <title>Duet English</title>
+<meta name="description" content="Türk hoca ve yabancı konuşma partneriyle birebir online İngilizce. Fiyatlar sitede, taahhüt yok.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Duet English">
+<meta property="og:description" content="İngilizceyi iki kişiyle öğren: kuralları Türk hocan anlatır, konuşmayı yabancı partnerinle yaparsın.">
+<meta property="og:image" content="https://batuhandac.github.io/duet-english/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%232244cc'/%3E%3Ccircle cx='20' cy='10' r='10' fill='%23d42c33' fill-opacity='.88'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800;900&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Caveat:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800;900&family=Source+Sans+3:wght@400;600;700&family=Caveat:wght@600;700&display=swap">
 <style>
-/* Layout: few blocks, each with its own shape (hero + notebook, prose + schedule, menu-style price list, one dark letter band, product panel, FAQ, form). Ballpoint blue is the brand; teacher's red pen appears only in corrections. */
+/* One committed light look. Blue circle = Türk hoca, red circle = konuşma partneri / teacher's pen. Mobile is the primary layout; wider screens add columns. */
 :root{
+  color-scheme:light;
   --paper:#ffffff;
-  --soft:#f3f5fa;
-  --ink:#101a31;
-  --muted:#59637b;
-  --line:#dfe3ec;
+  --soft:#f4f6fb;
+  --ink:#0f1a33;
+  --muted:#55607a;
+  --line:#e0e4ee;
   --blue:#2244cc;
-  --blue-soft:#e7ecfc;
-  --on-blue:#ffffff;
-  --red:#cf2a31;
-  --rule:#d2dcf2;
-  --green:#167a46;
-  --band:#101a31;
-  --band-fg:#eef1f8;
-  --band-muted:#a9b3cb;
+  --blue-soft:#e8edfd;
+  --red:#d42c33;
+  --red-soft:#fdecec;
+  --green:#157a45;
+  --rule:#d5ddf2;
   --display:"Schibsted Grotesk","Segoe UI",Arial,sans-serif;
   --body:"Source Sans 3","Segoe UI",Arial,sans-serif;
   --hand:"Caveat","Segoe Print","Comic Sans MS",cursive;
-  --wrap:1100px;
+  --gut:max(20px,env(safe-area-inset-left,0px));
+  --gut-r:max(20px,env(safe-area-inset-right,0px));
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#0e1526;--soft:#151d31;--ink:#e9ecf5;--muted:#9da7bf;--line:#26304a;
-  --blue:#90a7ff;--blue-soft:#1c2747;--on-blue:#0b1020;--red:#ff7070;--rule:#233150;--green:#4fc98b;
-  --band:#1a2440;--band-fg:#eef1f8;--band-muted:#a9b3cb;color-scheme:dark}}
-:root[data-theme="dark"]{
-  --paper:#0e1526;--soft:#151d31;--ink:#e9ecf5;--muted:#9da7bf;--line:#26304a;
-  --blue:#90a7ff;--blue-soft:#1c2747;--on-blue:#0b1020;--red:#ff7070;--rule:#233150;--green:#4fc98b;
-  --band:#1a2440;--band-fg:#eef1f8;--band-muted:#a9b3cb;color-scheme:dark}
-
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{background:var(--paper);color:var(--ink);font:400 17.5px/1.62 var(--body);margin:0}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+[hidden]{display:none!important}
+img{max-width:100%}
 a{color:var(--blue)}
-h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;text-wrap:balance}
-h1{font-size:clamp(2.5rem,6.4vw,4.6rem);font-weight:900;letter-spacing:-.035em}
-h2{font-size:clamp(1.8rem,3.8vw,2.7rem);font-weight:800;letter-spacing:-.02em}
-h3{font-size:1.12rem;font-weight:700}
 p{margin:0}
-.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance}
+h1{font-size:clamp(2.7rem,11.5vw,4.8rem);font-weight:900;letter-spacing:-.04em;line-height:1}
+h2{font-size:clamp(1.9rem,7vw,2.8rem);font-weight:800;letter-spacing:-.025em;line-height:1.08}
+h3{font-size:1.15rem;font-weight:800;line-height:1.2}
+.wrap{max-width:1120px;margin:0 auto;padding-left:var(--gut);padding-right:var(--gut-r)}
+.sec{padding-block:64px}
+.intro{color:var(--muted);font-size:1.08rem;margin-top:14px;max-width:56ch}
 .num{font-variant-numeric:tabular-nums}
-:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+@media (min-width:900px){.sec{padding-block:104px}body{font-size:17.5px}}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;font:700 1rem var(--body);padding:13px 22px;border-radius:999px;text-decoration:none;border:2px solid var(--blue);background:var(--blue);color:var(--on-blue);cursor:pointer}
-.btn.line{background:transparent;color:var(--blue)}
-.btn.small{padding:8px 16px;font-size:.92rem}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:999px;border:2px solid var(--blue);background:var(--blue);color:#fff;font:700 1.02rem var(--body);text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.btn:active{transform:scale(.98)}
+.btn.sm{min-height:42px;padding:0 18px;font-size:.95rem}
+.btn.alt{background:#fff;color:var(--blue)}
 
 /* header */
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;gap:28px;padding-block:12px}
-.logo{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink)}
-.logo .mk{position:relative;width:30px;height:20px;flex:none}
-.logo .mk::before,.logo .mk::after{content:"";position:absolute;top:0;width:20px;height:20px;border-radius:50%}
-.logo .mk::before{left:0;background:var(--blue)}
-.logo .mk::after{left:10px;background:var(--red);mix-blend-mode:multiply;opacity:.9}
-.logo b{font-family:var(--display);font-weight:900;font-size:1.5rem;letter-spacing:-.04em}
-nav{display:flex;gap:24px;margin-left:auto;align-items:center}
-nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.97rem}
-nav a:hover{color:var(--blue)}
-@media (max-width:820px){nav a{display:none}nav{gap:0}}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink)}
+.mk{position:relative;width:31px;height:21px;flex:none}
+.mk::before,.mk::after{content:"";position:absolute;top:0;width:21px;height:21px;border-radius:50%}
+.mk::before{left:0;background:var(--blue)}
+.mk::after{right:0;background:var(--red);opacity:.88}
+.logo b{font-family:var(--display);font-weight:900;font-size:1.55rem;letter-spacing:-.045em;line-height:1}
+.burger{display:inline-flex;flex-direction:column;justify-content:center;gap:6px;width:46px;height:46px;margin-right:-10px;padding:0 10px;background:none;border:0;cursor:pointer}
+.burger i{display:block;height:2.5px;border-radius:2px;background:var(--ink);transition:transform .2s ease,opacity .2s ease}
+header.open .burger i:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
+header.open .burger i:nth-child(2){opacity:0}
+header.open .burger i:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}
+nav{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--line);padding:6px var(--gut-r) 22px var(--gut);box-shadow:0 24px 40px -24px rgba(15,26,51,.3)}
+header.open nav{display:block}
+nav a.l{display:block;padding:15px 0;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none;font:700 1.25rem var(--display);letter-spacing:-.01em}
+nav .btn{width:100%;margin-top:18px}
+@media (min-width:900px){
+  .bar{height:68px}
+  .burger{display:none}
+  nav,header.open nav{display:flex;position:static;align-items:center;gap:30px;padding:0;border:0;box-shadow:none;background:none}
+  nav a.l{padding:0;border:0;font:600 .98rem var(--body);letter-spacing:0}
+  nav a.l:hover{color:var(--blue)}
+  nav .btn{width:auto;margin:0;min-height:42px;padding:0 18px;font-size:.95rem}
+}
 
 /* hero */
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:end;padding-block:72px 84px}
-.hero .wrap > div{min-width:0}
-.hero .sub{margin-top:24px;font-size:1.18rem;color:var(--muted);max-width:52ch}
-.hero .actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:32px}
-.hero .price-hint{color:var(--muted);font-size:.98rem}
-.hero .price-hint b{color:var(--ink)}
-@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:44px;padding-block:48px 64px}}
-
-.nb{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:4px;box-shadow:0 22px 44px -28px rgba(16,26,49,.45);transform:rotate(1.2deg)}
-.nb-top{display:flex;justify-content:space-between;gap:12px;padding:10px 18px;border-bottom:1px solid var(--line);font-size:.84rem;color:var(--muted);font-weight:600}
-.nb-page{position:relative;padding:22px 22px 18px 62px;min-height:288px;background-image:repeating-linear-gradient(to bottom,transparent 0 35px,var(--rule) 35px 36px);background-position:0 14px}
-.nb-page::before{content:"";position:absolute;top:0;bottom:0;left:44px;width:2px;background:var(--red);opacity:.4}
-.nb-n{position:absolute;left:14px;top:22px;font-family:var(--hand);font-size:1.5rem;color:var(--red);line-height:36px}
-.nb-line{font-size:1.18rem;line-height:36px}
-.nb-wrong s{text-decoration:none;position:relative}
-.nb-wrong s::after{content:"";position:absolute;left:-3px;right:-3px;top:52%;height:2.5px;background:var(--red);transform:rotate(-2deg);border-radius:2px}
-.nb-fix{font-family:var(--hand);font-weight:700;color:var(--red);font-size:1.62rem;line-height:36px}
-.nb-why{font-family:var(--hand);font-weight:600;color:var(--blue);font-size:1.38rem;line-height:36px}
-.nb-ctrl{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 18px;border-top:1px solid var(--line)}
-.nb-ctrl span{font-size:.88rem;color:var(--muted)}
-.nb-ctrl button{font:700 .92rem var(--body);color:var(--blue);background:none;border:0;cursor:pointer;padding:6px 0}
-@media (max-width:480px){.nb{transform:none}.nb-page{padding-left:50px}.nb-page::before{left:36px}.nb-n{left:10px}.nb-line{font-size:1.04rem}}
+.hero{overflow:hidden}
+.hero-grid{display:grid;gap:36px;padding-block:36px 56px}
+.hero-grid > div{min-width:0}
+.sub{margin-top:18px;font-size:1.16rem;line-height:1.5;color:var(--muted);max-width:30em}
+.cta{margin-top:26px;display:grid;gap:12px}
+.cta .btn{width:100%}
+.hint{color:var(--muted);font-size:.98rem;text-align:center}
+.hint b{color:var(--ink)}
+.art{position:relative;padding:26px 0 30px}
+.art::before,.art::after{content:"";position:absolute;border-radius:50%;aspect-ratio:1;z-index:0}
+.art::before{width:74%;left:-16%;top:-4%;background:var(--blue-soft)}
+.art::after{width:66%;right:-18%;bottom:-6%;background:var(--red-soft)}
+.nb{position:relative;z-index:1;margin:0;background:#fff;border:1px solid var(--line);border-radius:6px;box-shadow:0 26px 50px -30px rgba(15,26,51,.5)}
+.nb-top{display:flex;justify-content:space-between;gap:12px;padding:11px 16px;border-bottom:1px solid var(--line);font-size:.86rem;font-weight:700;color:var(--muted)}
+.nb-page{position:relative;padding:22px 16px 14px 50px;min-height:252px;background-image:repeating-linear-gradient(to bottom,transparent 0 35px,var(--rule) 35px 36px);background-position:0 14px}
+.nb-page::before{content:"";position:absolute;top:0;bottom:0;left:36px;width:2px;background:var(--red);opacity:.35}
+.nb-n{position:absolute;left:11px;top:22px;font:700 1.5rem/36px var(--hand);color:var(--red)}
+.nb-l{font-size:1.06rem;line-height:36px}
+.nb-wrong s{text-decoration:none;position:relative;white-space:nowrap}
+.nb-wrong s::after{content:"";position:absolute;left:-3px;right:-3px;top:52%;height:2.5px;border-radius:2px;background:var(--red);transform:rotate(-2deg);transform-origin:left center}
+.nb-fix{font:700 1.56rem/36px var(--hand);color:var(--red)}
+.nb-why{font:600 1.36rem/36px var(--hand);color:var(--blue)}
+.nb-ctrl{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:6px 6px 6px 16px;border-top:1px solid var(--line)}
+.nb-ctrl span{font-size:.9rem;color:var(--muted)}
+.nb-ctrl button{min-height:44px;padding:0 12px;font:700 .98rem var(--body);color:var(--blue);background:none;border:0;cursor:pointer}
+@media (prefers-reduced-motion:no-preference){
+  .nb.play .nb-wrong s::after{animation:strike .4s .35s both ease-out}
+  .nb.play .nb-fix{animation:write .7s .8s both ease-out}
+  .nb.play .nb-why{animation:write .9s 1.5s both ease-out}
+}
+@keyframes strike{from{transform:rotate(-2deg) scaleX(0)}to{transform:rotate(-2deg) scaleX(1)}}
+@keyframes write{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 -4% 0 0)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media (min-width:900px){
+  .hero-grid{grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;padding-block:76px 96px}
+  .sub{font-size:1.24rem}
+  .cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:34px}
+  .cta .btn{width:auto}
+  .hint{text-align:left}
+  .art{padding:44px 0 44px 20px}
+  .art::before{width:62%;left:-6%;top:0}
+  .art::after{width:56%;right:-10%;bottom:0}
+  .nb{transform:rotate(1.4deg)}
+  .nb-page{padding:22px 24px 16px 64px;min-height:270px}
+  .nb-page::before{left:46px}
+  .nb-n{left:15px}
+  .nb-l{font-size:1.2rem}
+  .nb-fix{font-size:1.66rem}
+  .nb-why{font-size:1.42rem}
+}
 
 /* how */
 .how{border-top:1px solid var(--line)}
-.how .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;padding-block:88px}
-.how .wrap > div{min-width:0}
-.how .prose{display:grid;gap:16px;margin-top:22px;max-width:56ch}
-.how .prose p{color:var(--muted)}
-.how .prose b{color:var(--ink)}
-.cal{border:1px solid var(--line);border-radius:12px;overflow:hidden;align-self:start}
-.cal-h{padding:14px 20px;background:var(--soft);border-bottom:1px solid var(--line);font-weight:700;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.cal-h span{font-weight:600;color:var(--muted);font-size:.92rem}
-.cal-r{display:grid;grid-template-columns:64px 64px 1fr;gap:12px;padding:15px 20px;border-bottom:1px solid var(--line);align-items:baseline}
+.how-grid{display:grid;gap:40px}
+.how-grid > div{min-width:0}
+.people{margin-top:30px;display:grid}
+.person{display:grid;grid-template-columns:52px 1fr;gap:16px;padding:22px 0;border-top:1px solid var(--line)}
+.person:last-child{border-bottom:1px solid var(--line)}
+.who{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff;font:800 1rem var(--display);letter-spacing:.02em}
+.who.t{background:var(--blue)}
+.who.p{background:var(--red)}
+.person .meta{font-weight:700;font-size:.95rem;margin-top:2px}
+.person.t .meta{color:var(--blue)}
+.person.p .meta{color:var(--red)}
+.person p.d{color:var(--muted);margin-top:8px}
+.cal{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 26px 50px -36px rgba(15,26,51,.45)}
+.cal-h{padding:16px 18px;border-bottom:1px solid var(--line);background:var(--soft)}
+.cal-h b{display:block;font:800 1.1rem var(--display)}
+.cal-h span{color:var(--muted);font-size:.93rem}
+.cal-r{display:grid;grid-template-columns:62px 1fr;gap:14px;padding:16px 18px;border-bottom:1px solid var(--line);align-items:start}
 .cal-r:last-child{border-bottom:0}
-.cal-r .d{font-family:var(--display);font-weight:800}
-.cal-r .t{color:var(--muted)}
-.cal-r .w{min-width:0}
-.cal-r .w small{display:block;color:var(--muted);font-size:.9rem}
-.who-t{color:var(--blue);font-weight:700}
-.who-p{color:var(--red);font-weight:700}
-.who-c{color:var(--green);font-weight:700}
-@media (max-width:900px){.how .wrap{grid-template-columns:1fr;gap:40px;padding-block:64px}}
+.cal-r .d b{display:block;font:800 1.02rem var(--display)}
+.cal-r .d span{color:var(--muted);font-size:.93rem}
+.cal-r .w b{display:flex;align-items:center;gap:8px;font-weight:700}
+.cal-r .w b::before{content:"";width:10px;height:10px;border-radius:50%;flex:none}
+.cal-r.t .w b::before{background:var(--blue)}
+.cal-r.p .w b::before{background:var(--red)}
+.cal-r.c .w b::before{background:none;border:2px solid var(--muted)}
+.cal-r .w span{display:block;color:var(--muted);font-size:.94rem;padding-left:18px}
+@media (min-width:900px){.how-grid{grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}}
+
+/* quiz */
+.quiz{background:var(--soft)}
+.quiz-grid{display:grid;gap:28px}
+.quiz-grid > div{min-width:0}
+.qcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 20px 24px;box-shadow:0 26px 50px -36px rgba(15,26,51,.45)}
+.q-top{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.92rem;font-weight:700;color:var(--muted)}
+.q-bar{height:6px;border-radius:3px;background:var(--line);margin-top:10px;overflow:hidden}
+.q-bar i{display:block;height:100%;background:var(--blue);border-radius:3px;transition:width .3s ease}
+.q-text{font:800 1.5rem/1.25 var(--display);letter-spacing:-.015em;margin-top:22px;min-height:2.5em}
+.q-text u{text-decoration:none;display:inline-block;min-width:2.6em;border-bottom:3px solid var(--ink);text-align:center;color:var(--blue)}
+.q-opts{display:grid;gap:10px;margin-top:18px}
+.q-opts button{min-height:54px;padding:0 18px;text-align:left;border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);font:600 1.08rem var(--body);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.q-opts button:hover:not(:disabled){border-color:var(--blue)}
+.q-opts button:disabled{cursor:default;opacity:.55}
+.q-opts button.right{border-color:var(--green);background:#e9f6ef;color:var(--green);opacity:1;font-weight:700}
+.q-opts button.wrong{border-color:var(--red);background:var(--red-soft);color:var(--red);opacity:1;text-decoration:line-through}
+.q-fb{margin-top:16px;min-height:74px}
+.q-fb p{font:700 1.4rem/1.25 var(--hand);color:var(--blue)}
+.q-fb .btn{margin-top:14px;width:100%}
+.q-res{text-align:left}
+.q-res small{display:block;font-weight:700;color:var(--muted);font-size:.95rem}
+.q-res .lv{font:900 4.6rem/1 var(--display);letter-spacing:-.04em;color:var(--blue);margin-top:6px}
+.q-res p{margin-top:12px;color:var(--muted)}
+.q-res p b{color:var(--ink)}
+.q-res .btn{width:100%;margin-top:20px}
+.q-res button.again{display:block;margin:10px auto 0;min-height:44px;background:none;border:0;color:var(--blue);font:700 .98rem var(--body);cursor:pointer}
+@media (min-width:900px){.quiz-grid{grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}.qcard{padding:30px 32px 32px}.q-fb .btn,.q-res .btn{width:auto}.q-res button.again{display:inline-block;margin:0 0 0 14px}}
 
 /* prices */
-.prices{background:var(--soft)}
-.prices .wrap{padding-block:88px}
-.menu{margin-top:40px;max-width:860px;display:grid}
+.seg{display:inline-flex;margin-top:24px;padding:4px;border-radius:999px;background:var(--soft);border:1px solid var(--line)}
+.seg button{min-height:44px;padding:0 18px;border-radius:999px;border:0;background:none;color:var(--muted);font:700 .98rem var(--body);cursor:pointer;white-space:nowrap}
+.seg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.seg em{font-style:normal;font-weight:600;opacity:.8}
+.menu{margin-top:26px;max-width:880px;border-top:2px solid var(--ink)}
 .item{padding:20px 0;border-bottom:1px solid var(--line)}
-.item:first-child{border-top:2px solid var(--ink)}
 .item-top{display:flex;align-items:baseline;gap:12px}
-.item-top h3{font-size:1.3rem;font-weight:800;white-space:nowrap}
-.item-top .dots{flex:1;border-bottom:2px dotted var(--muted);opacity:.5;transform:translateY(-5px);min-width:20px}
-.item-top .pr{font-family:var(--display);font-weight:900;font-size:1.4rem;white-space:nowrap}
-.item p{color:var(--muted);margin-top:4px}
-.item.us h3::after{content:"çoğu öğrencimiz bunu seçiyor";display:none}
-.item .note{font-family:var(--hand);font-size:1.35rem;color:var(--red);font-weight:700;margin-left:6px}
+.item-top h3{font-size:1.28rem}
+.item-top .dots{display:none;flex:1;border-bottom:2px dotted var(--muted);opacity:.45;transform:translateY(-5px)}
+.item-top .pr{margin-left:auto;white-space:nowrap;font:900 1.36rem var(--display);letter-spacing:-.01em}
+.item p{color:var(--muted);margin-top:4px;max-width:44ch}
+.item .tot{font-size:.92rem;color:var(--muted);margin-top:6px}
+.item.pick{background:var(--blue-soft);border-bottom-color:transparent;margin:0 -12px;padding:20px 12px;border-radius:14px}
+.item.pick + .item{border-top:0}
+.item .note{display:block;font:700 1.38rem/1.1 var(--hand);color:var(--red);margin-top:8px}
 .item.free .pr{color:var(--green)}
-.terms{margin-top:32px;max-width:70ch;color:var(--muted);display:grid;gap:12px}
+.terms{margin-top:28px;max-width:62ch;color:var(--muted);display:grid;gap:12px}
 .terms b{color:var(--ink)}
-@media (max-width:560px){.item-top{flex-wrap:wrap}.item-top .dots{display:none}.item-top .pr{margin-left:auto}.item-top h3{white-space:normal}}
+@media (min-width:700px){.item-top .dots{display:block}.item-top .pr{margin-left:0}.item.pick{margin:0 -20px;padding:22px 20px}}
 
 /* letter */
-.letter{background:var(--band);color:var(--band-fg)}
-.letter .wrap{padding-block:96px;display:grid;grid-template-columns:.75fr 1.25fr;gap:64px}
-.letter .wrap > div{min-width:0}
-.letter h2{color:var(--band-fg)}
-.letter .body{display:grid;gap:18px;font-size:1.14rem;line-height:1.7;max-width:60ch}
-.letter .body p{color:var(--band-fg)}
-.letter .sig{font-family:var(--hand);font-size:1.8rem;color:var(--band-fg);margin-top:8px}
-.letter .sig small{display:block;font-family:var(--body);font-size:.9rem;color:var(--band-muted)}
-@media (max-width:860px){.letter .wrap{grid-template-columns:1fr;gap:28px;padding-block:72px}}
+.letter{background:var(--ink);color:#eef1f8}
+.letter-grid{display:grid;gap:24px}
+.letter-grid > div{min-width:0}
+.letter h2{color:#fff}
+.letter .lead{font:700 1.5rem/1.3 var(--display);letter-spacing:-.01em;color:#fff}
+.letter .body{display:grid;gap:16px;font-size:1.1rem;line-height:1.66;max-width:60ch;color:#d5dbea}
+.sig{font:700 1.9rem/1 var(--hand);color:#fff;margin-top:10px}
+.sig small{display:block;font:400 .9rem var(--body);color:#a9b3cb;margin-top:6px}
+@media (min-width:900px){.letter-grid{grid-template-columns:.7fr 1.3fr;gap:72px}.letter .lead{font-size:1.75rem}.letter .body{font-size:1.16rem}}
 
-/* product */
-.prod .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;padding-block:88px;align-items:center}
-.prod .wrap > div{min-width:0}
-.prod .copy p{color:var(--muted);margin-top:18px;max-width:50ch}
-.panel{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--paper)}
-.panel-h{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 18px;border-bottom:1px solid var(--line);font-weight:700;background:var(--soft)}
-.panel-h span{font-weight:600;color:var(--muted);font-size:.9rem}
-.scroll{overflow-x:auto}
-.errs{border-collapse:collapse;width:100%;min-width:440px}
-.errs td{padding:13px 18px;border-bottom:1px solid var(--line);font-size:.96rem;vertical-align:middle}
-.errs td.w{color:var(--muted)}
-.errs s{text-decoration-color:var(--red);text-decoration-thickness:2px}
-.errs b{color:var(--ink)}
-.trend{display:flex;gap:4px}
-.trend i{width:11px;height:11px;border-radius:3px;background:var(--line)}
+/* progress */
+.prog-grid{display:grid;gap:30px}
+.prog-grid > div{min-width:0}
+.prog-grid .copy p{color:var(--muted);margin-top:14px;max-width:50ch}
+.panel{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 26px 50px -36px rgba(15,26,51,.45)}
+.panel-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:15px 18px;border-bottom:1px solid var(--line);background:var(--soft)}
+.panel-h b{font:800 1.08rem var(--display)}
+.panel-h span{color:var(--muted);font-size:.9rem;font-weight:600}
+.erow{display:grid;grid-template-columns:1fr auto;gap:8px 12px;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line)}
+.erow .fix{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:2px 10px;align-items:baseline}
+.erow s{color:var(--muted);text-decoration-color:var(--red);text-decoration-thickness:2px}
+.erow b{font-weight:700}
+.erow b::before{content:"→ ";color:var(--muted);font-weight:400}
+.trend{display:flex;align-items:center;gap:5px;font-size:.86rem;color:var(--muted)}
+.trend i{width:12px;height:12px;border-radius:3px;background:var(--line)}
 .trend i.x{background:var(--red)}
-.st{font-weight:700;font-size:.88rem;white-space:nowrap;text-align:right}
+.trend span{margin-left:4px}
+.st{font-weight:700;font-size:.9rem;white-space:nowrap}
 .st.ok{color:var(--green)}
 .st.wip{color:var(--blue)}
-.memo{padding:16px 18px}
-.memo p{font-family:var(--hand);font-size:1.42rem;line-height:1.3;color:var(--blue)}
-.memo small{display:block;margin-top:4px;color:var(--muted);font-size:.86rem}
-.cap{margin-top:10px;color:var(--muted);font-size:.85rem}
-@media (max-width:900px){.prod .wrap{grid-template-columns:1fr;gap:36px;padding-block:64px}}
+.memo{padding:16px 18px 18px}
+.memo p{font:600 1.46rem/1.25 var(--hand);color:var(--blue)}
+.memo small{display:block;margin-top:6px;color:var(--muted);font-size:.86rem}
+.cap{margin-top:10px;color:var(--muted);font-size:.86rem}
+@media (min-width:900px){
+  .prog-grid{grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}
+  .erow{grid-template-columns:1fr auto 104px}
+  .erow .fix{grid-column:auto}
+  .erow .st{text-align:right}
+}
 
 /* compare */
-.ask{border-top:1px solid var(--line)}
-.ask .wrap{padding-block:88px}
-.ask .intro{color:var(--muted);margin-top:16px;max-width:58ch;font-size:1.08rem}
-.qa{margin-top:36px;display:grid;max-width:900px}
-.qa div{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;padding:18px 0;border-bottom:1px solid var(--line)}
-.qa div:first-child{border-top:1px solid var(--line)}
-.qa p:first-child{font-weight:700}
-.qa p:last-child{color:var(--muted)}
-@media (max-width:700px){.qa div{grid-template-columns:1fr;gap:4px}}
+.ask{background:var(--soft)}
+.qa{margin-top:28px;max-width:920px;display:grid;gap:12px}
+.qa div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}
+.qa .q{font:800 1.08rem/1.3 var(--display)}
+.qa .a{color:var(--muted);margin-top:8px;padding-left:14px;border-left:3px solid var(--blue)}
+@media (min-width:800px){.qa{gap:0}.qa div{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;background:none;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:20px 0}.qa div:first-child{border-top:1px solid var(--line)}.qa .a{margin:0;padding:0;border:0}}
 
 /* teachers */
-.teach{background:var(--soft)}
-.teach .wrap{padding-block:88px;display:grid;grid-template-columns:1fr 1fr;gap:64px}
-.teach .wrap > div{min-width:0}
-.teach p{color:var(--muted);margin-top:16px;max-width:56ch}
-.teach p b{color:var(--ink)}
-@media (max-width:860px){.teach .wrap{grid-template-columns:1fr;gap:12px;padding-block:64px}}
+.teach-grid{display:grid;gap:8px}
+.teach-grid > div{min-width:0}
+.teach-grid p{color:var(--muted);margin-top:14px;max-width:58ch}
+.teach-grid p b{color:var(--ink)}
+@media (min-width:900px){.teach-grid{grid-template-columns:.7fr 1.3fr;gap:72px}.teach-grid div:last-child p:first-child{margin-top:0}}
 
 /* faq */
-.faq .wrap{padding-block:88px}
-.faq-list{margin-top:28px;max-width:820px}
-details{border-bottom:1px solid var(--line);padding-block:18px}
+.faq{border-top:1px solid var(--line)}
+.faq-list{margin-top:22px;max-width:820px}
+details{border-bottom:1px solid var(--line)}
 details:first-child{border-top:1px solid var(--line)}
-summary{font-weight:700;cursor:pointer;font-size:1.06rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:60px;padding:14px 0;font-weight:700;font-size:1.08rem;line-height:1.3;cursor:pointer;list-style:none;-webkit-tap-highlight-color:transparent}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-family:var(--display);font-weight:800;color:var(--blue);font-size:1.3rem;line-height:1}
+summary::after{content:"+";flex:none;font:800 1.5rem/1 var(--display);color:var(--blue)}
 details[open] summary::after{content:"–"}
-details p{margin-top:10px;color:var(--muted);max-width:68ch}
+details p{padding-bottom:18px;color:var(--muted);max-width:66ch}
 
 /* contact */
-.contact{border-top:1px solid var(--line)}
-.contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;padding-block:88px}
-.contact .wrap > div{min-width:0}
-.contact .copy p{color:var(--muted);margin-top:16px;max-width:46ch}
-.wa{margin-top:28px;padding-top:20px;border-top:1px solid var(--line)}
-.wa span{color:var(--muted);font-size:.95rem}
-.wa p{font-family:var(--display);font-weight:800;font-size:1.35rem;margin-top:2px}
-form{display:grid;gap:16px}
-label{font-weight:600;font-size:.95rem;display:grid;gap:6px}
-input,select{font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);width:100%}
-input:focus,select:focus{border-color:var(--blue)}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.contact{background:var(--soft)}
+.contact-grid{display:grid;gap:26px}
+.contact-grid > div{min-width:0}
+.contact .copy p{color:var(--muted);margin-top:14px;max-width:44ch}
+.wa-box{margin-top:22px}
+.wa-box a{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--green);text-decoration:none}
+form{display:grid;gap:16px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 20px;box-shadow:0 26px 50px -36px rgba(15,26,51,.45)}
+label{display:grid;gap:6px;font-weight:700;font-size:.96rem}
+input,select{width:100%;min-height:52px;padding:0 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);font:400 1.06rem var(--body)}
+input:focus,select:focus{border-color:var(--blue);outline:none;box-shadow:0 0 0 3px var(--blue-soft)}
+.row2{display:grid;gap:16px}
 .row2 > label{min-width:0}
-.check{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:.9rem;color:var(--muted)}
-.check input{width:auto;margin-top:4px}
-.err{color:var(--red);font-size:.92rem;font-weight:600}
-.ok{background:var(--blue-soft);padding:16px;border-radius:10px}
-form .btn{justify-self:start}
-@media (max-width:860px){.contact .wrap{grid-template-columns:1fr;gap:36px;padding-block:64px}}
-@media (max-width:480px){.row2{grid-template-columns:1fr}}
+.check{display:flex;gap:12px;align-items:flex-start;font-weight:400;font-size:.92rem;color:var(--muted)}
+.check input{width:22px;min-height:22px;height:22px;flex:none;margin:1px 0 0;accent-color:var(--blue)}
+.qnote{font-weight:700;color:var(--blue);font-size:.96rem}
+.err{color:var(--red);font-weight:700;font-size:.95rem}
+#ok{background:var(--blue-soft);border-radius:12px;padding:16px}
+form .btn{width:100%}
+@media (min-width:900px){.contact-grid{grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}form{padding:30px}.row2{grid-template-columns:1fr 1fr}form .btn{width:auto;justify-self:start}}
 
-footer{background:var(--soft);color:var(--muted);font-size:.92rem}
-footer .wrap{padding-block:32px;display:flex;flex-wrap:wrap;gap:10px 32px;align-items:center}
-footer .logo b{font-size:1.2rem}
+footer{color:var(--muted);font-size:.93rem;border-top:1px solid var(--line)}
+.foot{display:grid;gap:18px;padding-block:32px calc(32px + env(safe-area-inset-bottom,0px))}
+.foot .links{display:flex;flex-wrap:wrap;gap:6px 22px}
+.foot .links a{color:var(--ink);text-decoration:none;font-weight:600;padding:6px 0}
+@media (min-width:900px){.foot{grid-template-columns:auto 1fr auto;align-items:center;gap:36px}}
+
+/* phone dock */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:15;display:flex;gap:10px;padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);background:rgba(255,255,255,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .25s ease}
+.dock.on{transform:none}
+.dock .btn{flex:1;min-height:50px;padding:0 14px}
+.dock .btn.wa{flex:none;background:#fff;border-color:var(--green);color:var(--green)}
+@media (min-width:900px){.dock{display:none}}
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap">
+<header id="hdr">
+  <div class="wrap bar">
     <a class="logo" href="#top" aria-label="Duet English ana sayfa"><span class="mk" aria-hidden="true"></span><b>duet</b></a>
-    <nav aria-label="Ana menü">
-      <a href="#nasil">Nasıl işliyor</a>
-      <a href="#fiyat">Fiyatlar</a>
-      <a href="#sss">Sorular</a>
-      <a class="btn small" href="#iletisim">Seviye görüşmesi</a>
+    <button class="burger" id="burger" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+    <nav id="menu" aria-label="Ana menü">
+      <a class="l" href="#nasil">Nasıl işliyor</a>
+      <a class="l" href="#test">Seviye testi</a>
+      <a class="l" href="#fiyat">Fiyatlar</a>
+      <a class="l" href="#sss">Sorular</a>
+      <a class="btn" href="#iletisim">Seviye görüşmesi</a>
     </nav>
   </div>
 </header>
 
 <main id="top">
 
-<div class="hero">
-  <div class="wrap">
+<section class="hero">
+  <div class="wrap hero-grid">
     <div>
       <h1>İngilizceyi iki kişiyle öğren.</h1>
-      <p class="sub">Türk hocan kuralları Türkçe ile karşılaştırarak anlatır ve hatalarını defterine yazar. Haftada bir de ana dili İngilizce olan bir partnerle, o hafta öğrendiklerini konuşarak kullanırsın.</p>
-      <div class="actions">
+      <p class="sub">Kuralları Türk hocan, Türkçe ile karşılaştırarak anlatır. Konuşmayı ana dili İngilizce olan partnerinle yaparsın.</p>
+      <div class="cta" id="heroCta">
         <a class="btn" href="#iletisim">Ücretsiz seviye görüşmesi</a>
-        <span class="price-hint">Birebir dersler <b class="num">aylık 3.900 TL</b>, taahhüt yok.</span>
+        <p class="hint">Birebir dersler <b class="num">aylık 3.900 TL</b>, taahhüt yok.</p>
       </div>
     </div>
-
-    <figure class="nb" aria-label="Hata defterinden bir sayfa">
-      <div class="nb-top"><span>Hata defteri</span><span id="nbCat">Zamanlar</span></div>
-      <div class="nb-page" aria-live="polite">
-        <span class="nb-n" id="nbN">1</span>
-        <p class="nb-line nb-wrong" id="nbWrong"></p>
-        <p class="nb-line nb-fix" id="nbFix"></p>
-        <p class="nb-line nb-why" id="nbWhy"></p>
-      </div>
-      <div class="nb-ctrl"><span id="nbCount">1 / 5</span><button id="nbNext" type="button">Başka bir hata göster →</button></div>
-    </figure>
-  </div>
-</div>
-
-<section class="how" id="nasil">
-  <div class="wrap">
-    <div>
-      <h2>Neden iki kişi?</h2>
-      <div class="prose">
-        <p>Yetişkin öğrencilerin çoğu aynı iki yerde takılıyor. Kuralı ezberliyor ama neden öyle olduğunu anlamıyor. Sonra konuşma sırası gelince donup kalıyor.</p>
-        <p><b>Kuralları Türk hocan anlatır.</b> "Since" görünce neden present perfect kullanıldığını, Türkçedeki "-e" halinin seni neden "go to home" demeye ittiğini bilir. Ödevini ve hata defterini o tutar, ders kaçırırsan seni o arar.</p>
-        <p><b>Konuşmayı yabancı partnerinle yaparsın.</b> Ders anlatmaz, seninle sohbet eder. O hafta çalıştığın konuyu bir iş görüşmesinde ya da otel resepsiyonunda kullandırır, takıldığın yerleri hocana not düşer.</p>
-      </div>
-    </div>
-    <div class="cal">
-      <div class="cal-h">Örnek bir hafta <span>Birebir + konuşma programı</span></div>
-      <div class="cal-r"><span class="d">Salı</span><span class="t num">20.00</span><div class="w"><span class="who-t">Türk hocan</span><small>40 dakika, yeni konu</small></div></div>
-      <div class="cal-r"><span class="d">Çarş.</span><span class="t num">21.00</span><div class="w"><span class="who-c">Konuşma kulübü</span><small>45 dakika, isteğe bağlı, ücretsiz</small></div></div>
-      <div class="cal-r"><span class="d">Perş.</span><span class="t num">20.00</span><div class="w"><span class="who-t">Türk hocan</span><small>40 dakika, tekrar ve hata defteri</small></div></div>
-      <div class="cal-r"><span class="d">Cmt.</span><span class="t num">11.00</span><div class="w"><span class="who-p">Konuşma partnerin</span><small>30 dakika, haftanın konusuyla sohbet</small></div></div>
+    <div class="art">
+      <figure class="nb play" id="nb" aria-label="Hata defterinden bir sayfa">
+        <div class="nb-top"><span>Hata defteri</span><span id="nbCat">Zamanlar</span></div>
+        <div class="nb-page" aria-live="polite">
+          <span class="nb-n" id="nbN">1</span>
+          <p class="nb-l nb-wrong" id="nbWrong"><s>I am living</s> in Istanbul since 2015.</p>
+          <p class="nb-l nb-fix" id="nbFix">→ I have been living in Istanbul since 2015.</p>
+          <p class="nb-l nb-why" id="nbWhy">"since" varsa present perfect. Biz "yaşıyorum" deriz, karışması ondan.</p>
+        </div>
+        <div class="nb-ctrl"><span id="nbCount">1 / 5</span><button id="nbNext" type="button">Başka bir hata →</button></div>
+      </figure>
     </div>
   </div>
 </section>
 
-<section class="prices" id="fiyat">
+<section class="how sec" id="nasil">
+  <div class="wrap how-grid">
+    <div>
+      <h2>Neden iki kişi?</h2>
+      <p class="intro">Yetişkinlerin çoğu aynı iki yerde takılıyor. Kuralı ezberliyor ama nedenini anlamıyor, sonra konuşma sırası gelince donup kalıyor. İkisini ayrı kişilere verdik.</p>
+      <div class="people">
+        <div class="person t">
+          <span class="who t" aria-hidden="true">TR</span>
+          <div>
+            <h3>Türk hocan</h3>
+            <p class="meta">Haftada 2 ders, 40 dakika</p>
+            <p class="d">"Since" görünce neden present perfect geldiğini, Türkçedeki "-e" halinin seni neden "go to home" demeye ittiğini bilir. Hata defterini o tutar, ders kaçırırsan seni o arar.</p>
+          </div>
+        </div>
+        <div class="person p">
+          <span class="who p" aria-hidden="true">EN</span>
+          <div>
+            <h3>Konuşma partnerin</h3>
+            <p class="meta">Haftada 1 sohbet, 30 dakika</p>
+            <p class="d">Ana dili İngilizce. Ders anlatmaz, seninle konuşur. O hafta çalıştığın konuyu bir iş görüşmesinde ya da otel resepsiyonunda kullandırır, takıldığın yerleri hocana not düşer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cal">
+      <div class="cal-h"><b>Örnek bir hafta</b><span>Birebir + konuşma programı</span></div>
+      <div class="cal-r t"><div class="d"><b>Salı</b><span class="num">20.00</span></div><div class="w"><b>Türk hocan</b><span>Yeni konu, 40 dakika</span></div></div>
+      <div class="cal-r c"><div class="d"><b>Çarş.</b><span class="num">21.00</span></div><div class="w"><b>Konuşma kulübü</b><span>İsteğe bağlı, ücretsiz</span></div></div>
+      <div class="cal-r t"><div class="d"><b>Perş.</b><span class="num">20.00</span></div><div class="w"><b>Türk hocan</b><span>Tekrar ve hata defteri</span></div></div>
+      <div class="cal-r p"><div class="d"><b>Cmt.</b><span class="num">11.00</span></div><div class="w"><b>Konuşma partnerin</b><span>Haftanın konusuyla sohbet</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="quiz sec" id="test">
+  <div class="wrap quiz-grid">
+    <div>
+      <h2>Seviyeni iki dakikada tahmin et</h2>
+      <p class="intro">Yedi kısa soru. Yanlış yaptığında nedenini Türkçe yazıyoruz, derste olduğu gibi.</p>
+    </div>
+    <div class="qcard" id="quiz">
+      <noscript>Testi çözmek için tarayıcında JavaScript açık olmalı. Seviyeni görüşmede de ölçüyoruz.</noscript>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="fiyat">
   <div class="wrap">
     <h2>Fiyatlar</h2>
+    <div class="seg" role="group" aria-label="Ödeme şekli">
+      <button type="button" data-pay="m" aria-pressed="true">Aylık</button>
+      <button type="button" data-pay="q" aria-pressed="false">3 ay peşin <em>%10 indirim</em></button>
+    </div>
     <div class="menu">
       <div class="item">
-        <div class="item-top"><h3>Küçük grup</h3><span class="dots"></span><span class="pr num">1.900 TL</span></div>
+        <div class="item-top"><h3>Küçük grup</h3><span class="dots"></span><span class="pr num" data-m="1900">1.900 TL</span></div>
         <p>En fazla 4 kişi, aynı seviyede. Haftada 2 ders, 60 dakika, Türk hoca.</p>
+        <p class="tot num" hidden></p>
       </div>
       <div class="item">
-        <div class="item-top"><h3>Birebir</h3><span class="dots"></span><span class="pr num">3.900 TL</span></div>
+        <div class="item-top"><h3>Birebir</h3><span class="dots"></span><span class="pr num" data-m="3900">3.900 TL</span></div>
         <p>Haftada 2 ders, 40 dakika, Türk hoca.</p>
+        <p class="tot num" hidden></p>
+      </div>
+      <div class="item pick">
+        <div class="item-top"><h3>Birebir + konuşma</h3><span class="dots"></span><span class="pr num" data-m="5200">5.200 TL</span></div>
+        <p>Haftada 2 ders Türk hoca, 1 sohbet yabancı partner.</p>
+        <span class="note">çoğu öğrenciye bunu öneriyoruz</span>
+        <p class="tot num" hidden></p>
       </div>
       <div class="item">
-        <div class="item-top"><h3>Birebir + konuşma</h3><span class="dots"></span><span class="pr num">5.200 TL</span></div>
-        <p>Haftada 2 ders Türk hoca, 1 konuşma yabancı partner. <span class="note">en çok önerdiğimiz</span></p>
-      </div>
-      <div class="item">
-        <div class="item-top"><h3>Yoğun</h3><span class="dots"></span><span class="pr num">6.900 TL</span></div>
-        <p>Haftada 3 ders Türk hoca, 1 konuşma. Sınavı ya da iş görüşmesi yaklaşanlar için.</p>
+        <div class="item-top"><h3>Yoğun</h3><span class="dots"></span><span class="pr num" data-m="6900">6.900 TL</span></div>
+        <p>Haftada 3 ders Türk hoca, 1 sohbet. Sınavı ya da iş görüşmesi yaklaşanlar için.</p>
+        <p class="tot num" hidden></p>
       </div>
       <div class="item free">
         <div class="item-top"><h3>Konuşma kulübü</h3><span class="dots"></span><span class="pr">ücretsiz</span></div>
@@ -318,65 +449,59 @@ footer .logo b{font-size:1.2rem}
     </div>
     <div class="terms">
       <p>Fiyatlar aylık ve herkes için aynı. Genel İngilizce, iş İngilizcesi, YDS / YÖKDİL ve IELTS hazırlığı aynı fiyattan.</p>
-      <p><b>Bırakmak istediğin ay bize yazman yeterli,</b> sonraki ay ödeme alınmaz. Kayıt olduğun fiyat 12 ay boyunca değişmez. 3 ayı peşin ödersen %10 indirim yaparız, yarıda bırakırsan kalan ayları iade ederiz. 24 saat önceden haber verdiğin dersi başka güne alırız.</p>
+      <p><b>Bırakmak istediğin ay bize yazman yeterli,</b> sonraki ay ödeme alınmaz. Kayıt olduğun fiyat 12 ay boyunca değişmez. Peşin ödeyip yarıda bırakırsan kalan ayları iade ederiz. 24 saat önceden haber verdiğin dersi başka güne alırız.</p>
     </div>
   </div>
 </section>
 
-<section class="letter">
-  <div class="wrap">
+<section class="letter sec">
+  <div class="wrap letter-grid">
     <div><h2>Bu işi neden kurduk</h2></div>
     <div class="body">
-      <p>Hepimiz yıllardır İngilizce öğretiyoruz. Kimimiz okulda, kimimiz dershanede, kimimiz birebir derslerde.</p>
-      <p>Bize gelen yetişkinlerden en sık duyduğumuz hikaye şu: Bir kursa altı aylık paket parası ödemiş, yabancı bir hocayla aylarca sohbet etmiş, ama kimse ona İngilizcenin Türkçeden nerede ayrıldığını anlatmamış. Bir kısmı paketi bitiremeden bırakmış, parasını da geri alamamış.</p>
+      <p class="lead">Hepimiz yıllardır İngilizce öğretiyoruz. Bize gelen yetişkinlerden hep aynı hikayeyi dinledik.</p>
+      <p>Bir kursa altı aylık paket parası ödemiş, yabancı bir hocayla aylarca sohbet etmiş, ama kimse ona İngilizcenin Türkçeden nerede ayrıldığını anlatmamış. Bir kısmı paketi bitiremeden bırakmış, parasını da geri alamamış.</p>
       <p>Duet'i bu yüzden kuruyoruz. Kuralı iki dili de bilen bir öğretmen anlatsın, konuşmayı ana dili İngilizce olan biriyle yap. Fiyat sitede yazsın, herkes aynısını ödesin. Bırakmak isteyen bıraksın.</p>
       <p class="sig">Duet ekibi<small>Kurucu öğretmenler</small></p>
     </div>
   </div>
 </section>
 
-<section class="prod">
-  <div class="wrap">
+<section class="sec">
+  <div class="wrap prog-grid">
+    <div class="copy">
+      <h2>Ne kadar ilerlediğini görürsün</h2>
+      <p>Hocan tekrar ettiğin hataları tek sayfada tutar. Bir hata son dört derste hiç çıkmazsa listeden düşer. Her dersten sonra yeni kelimeler yazılı gelir, ay sonunda da hocan neyin oturduğunu ve gelecek ay neye çalışacağınızı yazar.</p>
+    </div>
     <div>
       <div class="panel">
-        <div class="panel-h">Hata defterin <span>B1 seviyesi, 3. ay</span></div>
-        <div class="scroll">
-          <table class="errs">
-            <tbody>
-              <tr><td class="w"><s>I am living here since</s> → <b>I have been living</b></td><td><div class="trend" aria-label="son 4 derste 1 kez"><i class="x"></i><i></i><i></i><i></i></div></td><td class="st ok">Düzeldi</td></tr>
-              <tr><td class="w"><s>He said me</s> → <b>He told me</b></td><td><div class="trend" aria-label="son 4 derste hiç"><i></i><i></i><i></i><i></i></div></td><td class="st ok">Düzeldi</td></tr>
-              <tr><td class="w"><s>I am agree</s> → <b>I agree</b></td><td><div class="trend" aria-label="son 4 derste 2 kez"><i class="x"></i><i class="x"></i><i></i><i></i></div></td><td class="st wip">Çalışıyoruz</td></tr>
-              <tr><td class="w"><s>If I will see</s> → <b>If I see</b></td><td><div class="trend" aria-label="son 4 derste 3 kez"><i class="x"></i><i class="x"></i><i></i><i class="x"></i></div></td><td class="st wip">Çalışıyoruz</td></tr>
-            </tbody>
-          </table>
-        </div>
+        <div class="panel-h"><b>Hata defterin</b><span>B1 seviyesi, 3. ay</span></div>
+        <div class="erow"><p class="fix"><s>I am living here since</s><b>I have been living</b></p><div class="trend" aria-label="Son 4 derste 1 kez"><i class="x"></i><i></i><i></i><i></i><span>son 4 ders</span></div><span class="st ok">Düzeldi</span></div>
+        <div class="erow"><p class="fix"><s>He said me</s><b>He told me</b></p><div class="trend" aria-label="Son 4 derste hiç"><i></i><i></i><i></i><i></i></div><span class="st ok">Düzeldi</span></div>
+        <div class="erow"><p class="fix"><s>I am agree</s><b>I agree</b></p><div class="trend" aria-label="Son 4 derste 2 kez"><i class="x"></i><i class="x"></i><i></i><i></i></div><span class="st wip">Çalışıyoruz</span></div>
+        <div class="erow"><p class="fix"><s>If I will see</s><b>If I see</b></p><div class="trend" aria-label="Son 4 derste 3 kez"><i class="x"></i><i class="x"></i><i></i><i class="x"></i></div><span class="st wip">Çalışıyoruz</span></div>
         <div class="memo"><p>Ekim: Toplantılarda çok daha rahatsın. Kasımda koşul cümleleri ve e-postada nezaket dili.</p><small>Hocanın aylık notu</small></div>
       </div>
       <p class="cap">Örnek bir öğrencinin sayfası.</p>
     </div>
-    <div class="copy">
-      <h2>Ne kadar ilerlediğini görürsün</h2>
-      <p>Hocan tekrar ettiğin hataları tek sayfada tutar. Bir hata son dört derste hiç çıkmazsa listeden düşer. Her dersten sonra yeni kelimeler yazılı gelir, ay sonunda da hocan neyin oturduğunu ve gelecek ay neye çalışacağınızı kısaca yazar.</p>
-    </div>
   </div>
 </section>
 
-<section class="ask">
+<section class="ask sec">
   <div class="wrap">
     <h2>Başka bir kursa da bakıyorsan</h2>
-    <p class="intro">Kayıt olmadan önce şu soruları sor. Bizim cevaplarımız yanlarında.</p>
+    <p class="intro">Kayıt olmadan önce şu beş soruyu sor. Bizim cevaplarımız altlarında.</p>
     <div class="qa">
-      <div><p>Fiyat sitede yazıyor mu, yoksa görüşmede mi söyleniyor?</p><p>Bizde yukarıda yazıyor, herkes için aynı.</p></div>
-      <div><p>Paketi yarıda bırakırsam paramı geri alabilir miyim?</p><p>Biz paket satmıyoruz, aylık ödüyorsun. Peşin ödediysen kalan aylar iade.</p></div>
-      <div><p>Senet, otomatik yenileme ya da cayma bedeli var mı?</p><p>Hiçbiri yok. Her ay ödemeden önce hatırlatıyoruz.</p></div>
-      <div><p>Kurs zam yaparsa ben de etkilenir miyim?</p><p>Kayıt olduğun fiyat 12 ay sabit.</p></div>
-      <div><p>Hocam dilbilgisini Türkçe açıklayabilir mi?</p><p>Evet. Konuşma için ayrıca yabancı partnerin var.</p></div>
+      <div><p class="q">Fiyat sitede yazıyor mu, yoksa görüşmede mi söyleniyor?</p><p class="a">Bizde yukarıda yazıyor, herkes için aynı.</p></div>
+      <div><p class="q">Paketi yarıda bırakırsam paramı geri alabilir miyim?</p><p class="a">Paket satmıyoruz, aylık ödüyorsun. Peşin ödediysen kalan aylar iade.</p></div>
+      <div><p class="q">Senet, otomatik yenileme ya da cayma bedeli var mı?</p><p class="a">Hiçbiri yok. Her ay ödemeden önce hatırlatıyoruz.</p></div>
+      <div><p class="q">Kurs zam yaparsa ben de etkilenir miyim?</p><p class="a">Kayıt olduğun fiyat 12 ay sabit.</p></div>
+      <div><p class="q">Hocam dilbilgisini Türkçe açıklayabilir mi?</p><p class="a">Evet. Konuşma için ayrıca yabancı partnerin var.</p></div>
     </div>
   </div>
 </section>
 
-<section class="teach" id="hocalar">
-  <div class="wrap">
+<section class="sec" id="hocalar">
+  <div class="wrap teach-grid">
     <div><h2>Hocalarımız</h2></div>
     <div>
       <p><b>Türk hocalarımız</b> İngiliz Dili Eğitimi ya da benzeri bölüm mezunu, en az beş yıl ders vermiş öğretmenler. Ekibe katılmadan önce kıdemli hocalarımıza, Türk öğrencilerin tipik bir hatası üzerine deneme dersi anlatıyorlar. İlk aylarında derslerinden biri izlenip geri bildirim veriliyor.</p>
@@ -386,7 +511,7 @@ footer .logo b{font-size:1.2rem}
   </div>
 </section>
 
-<section class="faq" id="sss">
+<section class="faq sec" id="sss">
   <div class="wrap">
     <h2>Sorular</h2>
     <div class="faq-list">
@@ -400,17 +525,17 @@ footer .logo b{font-size:1.2rem}
   </div>
 </section>
 
-<section class="contact" id="iletisim">
-  <div class="wrap">
+<section class="contact sec" id="iletisim">
+  <div class="wrap contact-grid">
     <div class="copy">
       <h2>Ücretsiz seviye görüşmesi</h2>
       <p>Bilgilerini bırak, aynı gün hocalarımızdan biri seni arasın. Görüşme 20 dakika sürüyor. Sonunda kayıt olmak zorunda değilsin, ilk ödemeyi de ilk dersten sonra alıyoruz.</p>
-      <div class="wa"><span>Form yerine WhatsApp'tan yazabilirsin</span><p class="num">0 (5xx) xxx xx xx</p></div>
+      <div class="wa-box" data-wa-only hidden><a data-wa href="#iletisim">WhatsApp'tan yaz: <span data-wa-num></span></a></div>
     </div>
     <div>
       <form id="f" novalidate>
         <label for="ad">Adın soyadın<input id="ad" name="ad" autocomplete="name"></label>
-        <label for="tel">Telefonun<input id="tel" name="tel" inputmode="tel" autocomplete="tel" placeholder="05xx xxx xx xx"></label>
+        <label for="tel">Telefonun<input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="05xx xxx xx xx"></label>
         <div class="row2">
           <label for="hedef">Ne için?
             <select id="hedef" name="hedef">
@@ -429,10 +554,11 @@ footer .logo b{font-size:1.2rem}
             </select>
           </label>
         </div>
-        <label class="check" for="kvkk"><input type="checkbox" id="kvkk" name="kvkk"> Bilgilerimin seviye görüşmesi için kullanılmasını kabul ediyorum. KVKK aydınlatma metnini okudum.</label>
-        <p class="err" id="err" hidden></p>
+        <p class="qnote" id="qnote" hidden></p>
+        <label class="check" for="kvkk"><input type="checkbox" id="kvkk" name="kvkk"><span>Bilgilerimin seviye görüşmesi için kullanılmasını kabul ediyorum. KVKK aydınlatma metnini okudum.</span></label>
+        <p class="err" id="err" role="alert" hidden></p>
         <button class="btn" type="submit">Beni arayın</button>
-        <p class="ok" id="ok" hidden>Teşekkürler. Bu önizleme sürümünde form kayıt almıyor, yayındaki sitede bu adımda hocalarımıza bildirim gidecek.</p>
+        <p class="ok" id="ok" hidden></p>
       </form>
     </div>
   </div>
@@ -440,16 +566,44 @@ footer .logo b{font-size:1.2rem}
 </main>
 
 <footer>
-  <div class="wrap">
+  <div class="wrap foot">
     <a class="logo" href="#top" aria-label="Duet English ana sayfa"><span class="mk" aria-hidden="true"></span><b>duet</b></a>
-    <span>Online İngilizce, Türk hoca ve yabancı konuşma partneriyle.</span>
-    <span>Mesafeli satış sözleşmesi · İade koşulları · KVKK</span>
+    <div class="links"><a href="#nasil">Nasıl işliyor</a><a href="#test">Seviye testi</a><a href="#fiyat">Fiyatlar</a><a href="#sss">Sorular</a><a href="#iletisim">Seviye görüşmesi</a></div>
     <span>© 2026 Duet English</span>
   </div>
 </footer>
 
+<div class="dock" id="dock">
+  <a class="btn" href="#iletisim">Ücretsiz seviye görüşmesi</a>
+  <a class="btn wa" data-wa data-wa-only hidden href="#iletisim">WhatsApp</a>
+</div>
+
 <script>
 (function(){
+  /* WhatsApp numarası netleşince buraya ülke koduyla yaz, örn. "905321234567". Boşken WhatsApp butonları gizli kalır. */
+  var WHATSAPP = "";
+
+  var $ = function(id){ return document.getElementById(id); };
+  var all = function(s){ return Array.prototype.slice.call(document.querySelectorAll(s)); };
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+  function tl(n){ return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " TL"; }
+
+  /* menu */
+  var hdr = $("hdr"), burger = $("burger");
+  function setMenu(open){ hdr.classList.toggle("open", open); burger.setAttribute("aria-expanded", open ? "true" : "false"); burger.setAttribute("aria-label", open ? "Menüyü kapat" : "Menüyü aç"); }
+  burger.addEventListener("click", function(){ setMenu(!hdr.classList.contains("open")); });
+  all("#menu a").forEach(function(a){ a.addEventListener("click", function(){ setMenu(false); }); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape") setMenu(false); });
+
+  /* whatsapp */
+  if (WHATSAPP) {
+    var pretty = "0 (" + WHATSAPP.slice(2,5) + ") " + WHATSAPP.slice(5,8) + " " + WHATSAPP.slice(8,10) + " " + WHATSAPP.slice(10,12);
+    all("[data-wa]").forEach(function(a){ a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Merhaba, seviye görüşmesi almak istiyorum."); a.target = "_blank"; a.rel = "noopener"; });
+    all("[data-wa-num]").forEach(function(s){ s.textContent = pretty; });
+    all("[data-wa-only]").forEach(function(el){ el.hidden = false; });
+  }
+
+  /* hata defteri */
   var E = [
     {cat:"Zamanlar", pre:"", wrong:"I am living", post:" in Istanbul since 2015.", fix:"I have been living in Istanbul since 2015.", why:"\"since\" varsa present perfect. Biz \"yaşıyorum\" deriz, karışması ondan."},
     {cat:"Fiiller", pre:"", wrong:"I am agree", post:" with you.", fix:"I agree with you.", why:"agree zaten fiil, başına am gelmez."},
@@ -457,27 +611,113 @@ footer .logo b{font-size:1.2rem}
     {cat:"Edatlar", pre:"I will go ", wrong:"to home", post:" after work.", fix:"I will go home after work.", why:"home'dan önce to yok. \"Eve\"deki -e bizi to'ya itiyor."},
     {cat:"Kelime", pre:"Can you ", wrong:"open the light", post:"?", fix:"Can you turn on the light?", why:"Biz ışığı \"açarız\", İngilizcede turn on."}
   ];
-  var i = 0, $ = function(id){ return document.getElementById(id); };
-  function esc(s){ return s.replace(/[&<>]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;"}[c]; }); }
-  function show(){
-    var e = E[i];
+  var ei = 0, nb = $("nb");
+  $("nbNext").addEventListener("click", function(){
+    ei = (ei + 1) % E.length;
+    var e = E[ei];
     $("nbCat").textContent = e.cat;
-    $("nbN").textContent = i + 1;
-    $("nbCount").textContent = (i + 1) + " / " + E.length;
+    $("nbN").textContent = ei + 1;
+    $("nbCount").textContent = (ei + 1) + " / " + E.length;
     $("nbWrong").innerHTML = esc(e.pre) + "<s>" + esc(e.wrong) + "</s>" + esc(e.post);
     $("nbFix").textContent = "→ " + e.fix;
     $("nbWhy").textContent = e.why;
-  }
-  $("nbNext").addEventListener("click", function(){ i = (i + 1) % E.length; show(); });
-  show();
+    nb.classList.remove("play"); void nb.offsetWidth; nb.classList.add("play");
+  });
 
+  /* seviye testi */
+  var Q = [
+    {s:"She ___ a teacher.", o:["am","is","are"], a:1, why:"He, she, it ile is kullanılır."},
+    {s:"I ___ to the cinema yesterday.", o:["go","went","gone"], a:1, why:"yesterday geçmiş zaman ister: go, went olur."},
+    {s:"There isn't ___ milk in the fridge.", o:["some","any","no"], a:1, why:"Olumsuz cümlede some yerine any gelir."},
+    {s:"I have lived here ___ 2015.", o:["for","since","from"], a:1, why:"Başlangıç noktası varsa since, süre varsa for."},
+    {s:"If it rains tomorrow, we ___ at home.", o:["stay","will stay","would stay"], a:1, why:"will, if'li tarafa değil diğer tarafa gelir."},
+    {s:"I wish I ___ more time last week.", o:["had","had had","have had"], a:1, why:"Geçmişe pişmanlık: wish + had + fiilin 3. hali."},
+    {s:"The report ___ by the time you arrive.", o:["will finish","will have been finished","is finishing"], a:1, why:"O zamana kadar bitmiş olacak: will have been + 3. hal."}
+  ];
+  /* doğru şıkkın yeri her soruda farklı olsun */
+  var ORDER = [[1,0,2],[0,2,1],[2,1,0],[1,2,0],[0,1,2],[2,0,1],[1,0,2]];
+  var LV = [
+    {max:2, lv:"A1", t:"Temel kalıpları biliyorsun. Sağlam bir başlangıçla hızlı ilerlersin."},
+    {max:4, lv:"A2", t:"Günlük durumları anlatabiliyorsun, zamanlarda boşluklar var."},
+    {max:5, lv:"B1", t:"Derdini anlatıyorsun. Sırada akıcılık ve daha karmaşık yapılar var."},
+    {max:7, lv:"B2", t:"İyi bir seviyedesin. Bundan sonrası akıcılık, iş ve sınav İngilizcesi."}
+  ];
+  var quiz = $("quiz"), qi = 0, score = 0;
+  function drawQ(){
+    var q = Q[qi], ord = ORDER[qi];
+    quiz.innerHTML =
+      '<div class="q-top"><span>Soru ' + (qi + 1) + ' / ' + Q.length + '</span><span>' + score + ' doğru</span></div>' +
+      '<div class="q-bar"><i style="width:' + (qi / Q.length * 100) + '%"></i></div>' +
+      '<p class="q-text">' + esc(q.s).replace("___", "<u>&nbsp;</u>") + '</p>' +
+      '<div class="q-opts">' + ord.map(function(k){ return '<button type="button" data-k="' + k + '">' + esc(q.o[k]) + '</button>'; }).join("") + '</div>' +
+      '<div class="q-fb" aria-live="polite"></div>';
+  }
+  function drawRes(){
+    var r = LV.filter(function(x){ return score <= x.max; })[0];
+    quiz.innerHTML =
+      '<div class="q-res"><small>Tahmini seviyen</small><div class="lv">' + r.lv + '</div>' +
+      '<p><b>' + score + ' / ' + Q.length + ' doğru.</b> ' + r.t + '</p>' +
+      '<p>Bu kısa bir dilbilgisi tahmini. Konuşma ve dinleme seviyeni 20 dakikalık görüşmede ölçüyoruz.</p>' +
+      '<a class="btn" href="#iletisim" data-go>Ücretsiz seviye görüşmesi al</a><button type="button" class="again">Testi tekrar çöz</button></div>';
+    $("qnote").textContent = "Kısa test sonucun: " + r.lv + " (" + score + " / " + Q.length + ")";
+    $("qnote").hidden = false;
+  }
+  quiz.addEventListener("click", function(ev){
+    var b = ev.target.closest("button");
+    if (!b) return;
+    if (b.classList.contains("again")) { qi = 0; score = 0; drawQ(); return; }
+    if (b.classList.contains("next")) { qi++; if (qi < Q.length) drawQ(); else drawRes(); return; }
+    if (!b.hasAttribute("data-k") || b.disabled) return;
+    var q = Q[qi], k = +b.getAttribute("data-k"), ok = k === q.a;
+    if (ok) score++;
+    all("#quiz .q-opts button").forEach(function(x){
+      x.disabled = true;
+      if (+x.getAttribute("data-k") === q.a) x.classList.add("right");
+    });
+    if (!ok) b.classList.add("wrong");
+    quiz.querySelector(".q-text u").textContent = q.o[q.a];
+    quiz.querySelector(".q-top span:last-child").textContent = score + " doğru";
+    quiz.querySelector(".q-bar i").style.width = ((qi + 1) / Q.length * 100) + "%";
+    quiz.querySelector(".q-fb").innerHTML = '<p>' + (ok ? "Doğru. " : "") + esc(q.why) + '</p><button type="button" class="btn sm next">' + (qi + 1 < Q.length ? "Sıradaki soru" : "Sonucu gör") + '</button>';
+  });
+  drawQ();
+
+  /* fiyat: aylık / 3 ay peşin */
+  all(".seg button").forEach(function(b){
+    b.addEventListener("click", function(){
+      var q = b.getAttribute("data-pay") === "q";
+      all(".seg button").forEach(function(x){ x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      all(".pr[data-m]").forEach(function(p){
+        var m = +p.getAttribute("data-m"), per = q ? m * 0.9 : m, tot = p.closest(".item").querySelector(".tot");
+        p.textContent = tl(per);
+        tot.hidden = !q;
+        tot.textContent = q ? "Aylık karşılığı. 3 ay toplam " + tl(per * 3) + ", " + tl(m * 3 - per * 3) + " indirim." : "";
+      });
+    });
+  });
+
+  /* telefon alt çubuğu */
+  var dock = $("dock"), cta = $("heroCta"), contact = $("iletisim"), tick = false;
+  function place(){
+    tick = false;
+    var past = cta.getBoundingClientRect().bottom < 0;
+    var near = contact.getBoundingClientRect().top < window.innerHeight * 0.75;
+    dock.classList.toggle("on", past && !near && !hdr.classList.contains("open"));
+  }
+  window.addEventListener("scroll", function(){ if (!tick) { tick = true; requestAnimationFrame(place); } }, {passive:true});
+  window.addEventListener("resize", place);
+  place();
+
+  /* form */
   $("f").addEventListener("submit", function(ev){
     ev.preventDefault();
     var ad = $("ad").value.trim(), tel = $("tel").value.replace(/\D/g, ""), msg = "";
     if (ad.length < 3) msg = "Adını ve soyadını yaz.";
     else if (tel.length < 10) msg = "Telefon numaran en az 10 haneli olmalı.";
     else if (!$("kvkk").checked) msg = "Devam etmek için KVKK onayını işaretle.";
-    $("err").textContent = msg; $("err").hidden = !msg; $("ok").hidden = !!msg;
+    $("err").textContent = msg; $("err").hidden = !msg;
+    $("ok").hidden = !!msg;
+    if (!msg) $("ok").textContent = "Teşekkürler " + ad.split(" ")[0] + ". Site şu an önizleme aşamasında, bu yüzden başvurun kaydedilmedi. Kayıtlar açıldığında bu form doğrudan hocalarımıza ulaşacak.";
   });
 })();
 </script>
