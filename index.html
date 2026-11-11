@@ -142,8 +142,18 @@ nav .btn{width:100%;margin-top:18px}
   .nb-why{font-size:1.42rem}
 }
 
+/* toefl band */
+.tband{background:var(--ink);color:#fff}
+.tband .wrap{display:grid;gap:16px;padding-block:26px}
+.tband .k{font:700 1.4rem/1 var(--hand);color:#ff9a9a}
+.tband b{display:block;font:800 1.4rem/1.2 var(--display);letter-spacing:-.015em;margin-top:6px}
+.tband p{color:#d5dbea;margin-top:6px;max-width:52ch}
+.tband .btn{background:#fff;border-color:#fff;color:var(--ink);width:100%}
+@media (min-width:900px){.tband .wrap{grid-template-columns:1fr auto;align-items:center;gap:40px;padding-block:34px}.tband .btn{width:auto}.tband b{font-size:1.7rem}}
+.gfoot .more{font-weight:700;text-decoration:none}
+
 /* how */
-.how{border-top:1px solid var(--line)}
+.how{border-top:0}
 .how-grid{display:grid;gap:40px}
 .how-grid > div{min-width:0}
 .people{margin-top:30px;display:grid}
@@ -367,6 +377,7 @@ footer{color:var(--muted);font-size:.93rem;border-top:1px solid var(--line)}
     <nav id="menu" aria-label="Ana menü">
       <a class="l" href="#nasil">Nasıl işliyor</a>
       <a class="l" href="#programlar">Programlar</a>
+      <a class="l" href="toefl/">TOEFL</a>
       <a class="l" href="#test">Seviye testi</a>
       <a class="l" href="#fiyat">Fiyatlar</a>
       <a class="l" href="#sss">Sorular</a>
@@ -387,7 +398,7 @@ footer{color:var(--muted);font-size:.93rem;border-top:1px solid var(--line)}
         <p class="hint">Birebir dersler <b class="num">aylık 3.900 TL</b>, taahhüt yok.</p>
       </div>
       <div class="for" aria-label="Programlar">
-        <a href="#gunluk">Günlük konuşma</a><a href="#is">İş İngilizcesi</a><a href="#toefl">TOEFL iBT<em>yeni format</em></a><a href="#ielts">IELTS</a><a href="#yds">YDS / YÖKDİL</a>
+        <a href="#gunluk">Günlük konuşma</a><a href="#is">İş İngilizcesi</a><a href="toefl/">TOEFL iBT<em>yeni format</em></a><a href="#ielts">IELTS</a><a href="#yds">YDS / YÖKDİL</a>
       </div>
     </div>
     <div class="art">
@@ -402,6 +413,17 @@ footer{color:var(--muted);font-size:.93rem;border-top:1px solid var(--line)}
         <div class="nb-ctrl"><span id="nbCount">1 / 5</span><button id="nbNext" type="button">Başka bir hata →</button></div>
       </figure>
     </div>
+  </div>
+</section>
+
+<section class="tband" aria-label="TOEFL">
+  <div class="wrap">
+    <div>
+      <span class="k">yeni format</span>
+      <b>TOEFL Ocak 2026'da değişti.</b>
+      <p>Yeni soru tiplerini 8 dakikalık ücretsiz mini denemede gör, hangi görevde puan kaybettiğini öğren.</p>
+    </div>
+    <a class="btn" href="toefl/#deneme">Mini denemeyi çöz</a>
   </div>
 </section>
 
@@ -624,7 +646,7 @@ footer{color:var(--muted);font-size:.93rem;border-top:1px solid var(--line)}
 <footer>
   <div class="wrap foot">
     <a class="logo" href="#top" aria-label="Duet English ana sayfa"><span class="mk" aria-hidden="true"></span><b>duet</b></a>
-    <div class="links"><a href="#nasil">Nasıl işliyor</a><a href="#programlar">Programlar</a><a href="#test">Seviye testi</a><a href="#fiyat">Fiyatlar</a><a href="#sss">Sorular</a><a href="#iletisim">Seviye görüşmesi</a></div>
+    <div class="links"><a href="#nasil">Nasıl işliyor</a><a href="#programlar">Programlar</a><a href="toefl/">TOEFL</a><a href="#test">Seviye testi</a><a href="#fiyat">Fiyatlar</a><a href="#sss">Sorular</a><a href="#iletisim">Seviye görüşmesi</a></div>
     <span>© 2026 Duet English</span>
   </div>
 </footer>
@@ -688,7 +710,7 @@ footer{color:var(--muted);font-size:.93rem;border-top:1px solid var(--line)}
       t:"E-posta kalıpları, toplantı dili ve sunum yapısı. Yazdıklarını birlikte düzeltirsiniz.", p:"Toplantı, mülakat ve müşteri görüşmesi provası yaptırır.", pk:"Birebir + konuşma", pr:"5.200 TL / ay"},
     toefl:{n:"TOEFL iBT", tag:"yeni format", f:"TOEFL iBT", h:"TOEFL Ocak 2026'da değişti", l:"Eski formata göre yazılmış kitap ve videolar bu sınavı anlatmıyor. Programımız yeni formata göre.",
       facts:["Puan artık 1 ile 6 arasında veriliyor.","Okuma ve dinleme, verdiğin cevaplara göre zorlaşıyor.","Yeni soru tipleri eklendi.","Sonuç 72 saat içinde açıklanıyor."],
-      t:"Her bölümün stratejisini çalıştırır, yazma görevlerine her hafta yazılı geri bildirim verir.", p:"Konuşma bölümünün provasını süre tutarak yaptırır.", pk:"TOEFL / IELTS paketi", pr:"7.900 TL / ay"},
+      t:"Her bölümün stratejisini çalıştırır, yazma görevlerine her hafta yazılı geri bildirim verir.", p:"Konuşma bölümünün provasını süre tutarak yaptırır.", pk:"TOEFL / IELTS paketi", pr:"7.900 TL / ay", more:["toefl/#deneme","Ücretsiz mini denemeyi çöz →"]},
     ielts:{n:"IELTS", f:"IELTS", h:"Hedef bandına göre plan", l:"Yurt dışı başvurusu, yüksek lisans ya da göç için gereken banda göre çalışırsın.",
       t:"Writing Task 1 ve 2'yi band ölçütlerine göre değerlendirir, okuma ve dinlemede soru tiplerini çalıştırır.", p:"Speaking'in üç bölümünü gerçek sınav düzeninde prova ettirir.", pk:"TOEFL / IELTS paketi", pr:"7.900 TL / ay"},
     yds:{n:"YDS / YÖKDİL", f:"YDS / YÖKDİL", h:"Hedefin 55 ya da 70 ise", l:"Bu sınavlar okuma, kelime, dilbilgisi ve çeviriden oluşuyor. Burada en çok işe yarayan şey sınavı bilen bir Türk hoca.",
@@ -708,7 +730,7 @@ footer{color:var(--muted);font-size:.93rem;border-top:1px solid var(--line)}
         '<div class="grow"><span class="who t" aria-hidden="true">TR</span><div><b>Türk hocan</b><span class="tx">' + esc(g.t) + '</span></div></div>' +
         '<div class="grow"><span class="who p" aria-hidden="true">EN</span><div><b>Konuşma partnerin</b><span class="tx">' + esc(g.p) + '</span></div></div>' +
       '</div>' +
-      '<div class="gfoot"><div class="pk"><small>Önerdiğimiz program</small><b>' + esc(g.pk) + '</b><small class="num">' + esc(g.pr) + '</small></div>' +
+      '<div class="gfoot"><div class="pk"><small>Önerdiğimiz program</small><b>' + esc(g.pk) + '</b><small class="num">' + esc(g.pr) + '</small>' + (g.more ? '<a class="more" href="' + g.more[0] + '">' + esc(g.more[1]) + '</a>' : '') + '</div>' +
         '<a class="btn" href="#iletisim" data-f="' + esc(g.f) + '">Bu hedefle görüşme al</a></div>';
   }
   chips.addEventListener("click", function(ev){

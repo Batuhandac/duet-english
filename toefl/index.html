@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffffff">
+<meta name="color-scheme" content="light">
+<title>Duet TOEFL</title>
+<meta name="description" content="Yeni TOEFL iBT formatına göre hazırlık. 8 dakikalık ücretsiz mini denemeyle yeni soru tiplerini gör.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Duet TOEFL: yeni format, ücretsiz mini deneme">
+<meta property="og:description" content="TOEFL Ocak 2026'da değişti. Yeni soru tiplerini 8 dakikalık ücretsiz mini denemede gör.">
+<meta property="og:image" content="https://batuhandac.github.io/duet-english/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%232244cc'/%3E%3Ccircle cx='20' cy='10' r='10' fill='%23d42c33' fill-opacity='.88'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800;900&family=Source+Sans+3:wght@400;600;700&family=Caveat:wght@600;700&display=swap">
+<style>
+/* Same brand as the main page. The mini test is the centre of this page: a plain exam screen with a dark top bar, timer and one task per screen. */
+:root{
+  color-scheme:light;
+  --paper:#ffffff;--soft:#f4f6fb;--ink:#0f1a33;--muted:#55607a;--line:#e0e4ee;
+  --blue:#2244cc;--blue-soft:#e8edfd;--red:#d42c33;--red-soft:#fdecec;--green:#157a45;--green-soft:#e9f6ef;
+  --display:"Schibsted Grotesk","Segoe UI",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Arial,sans-serif;
+  --hand:"Caveat","Segoe Print","Comic Sans MS",cursive;
+  --gut:max(20px,env(safe-area-inset-left,0px));--gut-r:max(20px,env(safe-area-inset-right,0px));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+[hidden]{display:none!important}
+a{color:var(--blue)}
+p{margin:0}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance}
+h1{font-size:clamp(2.6rem,11vw,4.4rem);font-weight:900;letter-spacing:-.04em;line-height:1}
+h2{font-size:clamp(1.9rem,7vw,2.8rem);font-weight:800;letter-spacing:-.025em;line-height:1.08}
+h3{font-size:1.15rem;font-weight:800;line-height:1.2}
+.wrap{max-width:1120px;margin:0 auto;padding-left:var(--gut);padding-right:var(--gut-r)}
+.sec{padding-block:64px}
+.intro{color:var(--muted);font-size:1.08rem;margin-top:14px;max-width:56ch}
+.num{font-variant-numeric:tabular-nums}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+@media (min-width:900px){.sec{padding-block:104px}body{font-size:17.5px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:999px;border:2px solid var(--blue);background:var(--blue);color:#fff;font:700 1.02rem var(--body);text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.btn:active{transform:scale(.98)}
+.btn.alt{background:#fff;color:var(--blue)}
+.btn:disabled{opacity:.45;cursor:default}
+
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink)}
+.mk{position:relative;width:31px;height:21px;flex:none}
+.mk::before,.mk::after{content:"";position:absolute;top:0;width:21px;height:21px;border-radius:50%}
+.mk::before{left:0;background:var(--blue)}
+.mk::after{right:0;background:var(--red);opacity:.88}
+.logo b{font-family:var(--display);font-weight:900;font-size:1.55rem;letter-spacing:-.045em;line-height:1}
+.logo span.sub{font:800 .95rem var(--display);color:var(--red);margin-left:-2px;align-self:flex-end;padding-bottom:3px}
+.burger{display:inline-flex;flex-direction:column;justify-content:center;gap:6px;width:46px;height:46px;margin-right:-10px;padding:0 10px;background:none;border:0;cursor:pointer}
+.burger i{display:block;height:2.5px;border-radius:2px;background:var(--ink);transition:transform .2s ease,opacity .2s ease}
+header.open .burger i:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
+header.open .burger i:nth-child(2){opacity:0}
+header.open .burger i:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}
+nav{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--line);padding:6px var(--gut-r) 22px var(--gut);box-shadow:0 24px 40px -24px rgba(15,26,51,.3)}
+header.open nav{display:block}
+nav a.l{display:block;padding:15px 0;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none;font:700 1.25rem var(--display)}
+nav .btn{width:100%;margin-top:18px}
+@media (min-width:900px){
+  .bar{height:68px}.burger{display:none}
+  nav,header.open nav{display:flex;position:static;align-items:center;gap:30px;padding:0;border:0;box-shadow:none;background:none}
+  nav a.l{padding:0;border:0;font:600 .98rem var(--body)}
+  nav a.l:hover{color:var(--blue)}
+  nav .btn{width:auto;margin:0;min-height:42px;padding:0 18px;font-size:.95rem}
+}
+
+/* hero */
+.hero .wrap{padding-block:36px 48px}
+.kick{display:inline-block;font:700 1.5rem/1 var(--hand);color:var(--red);margin-bottom:10px}
+.hero .sub{margin-top:18px;font-size:1.16rem;line-height:1.5;color:var(--muted);max-width:34em}
+.cta{margin-top:26px;display:grid;gap:12px}
+.cta .btn{width:100%}
+.facts{margin:34px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.facts li{padding:16px 12px 16px 0;border-bottom:1px solid var(--line);min-width:0}
+.facts li:nth-child(even){padding-left:16px;border-left:1px solid var(--line)}
+.facts b{display:block;font:900 1.5rem/1.1 var(--display);letter-spacing:-.02em}
+.facts span{color:var(--muted);font-size:.93rem}
+@media (min-width:900px){
+  .hero .wrap{padding-block:80px 72px}
+  .cta{display:flex;gap:14px}.cta .btn{width:auto}
+  .facts{grid-template-columns:repeat(4,1fr);margin-top:56px}
+  .facts li{padding:20px 20px 0 0;border-bottom:0}
+  .facts li + li{padding-left:24px;border-left:1px solid var(--line)}
+  .facts b{font-size:1.9rem}
+}
+
+/* mini test */
+.test{background:var(--soft)}
+.sim{margin-top:26px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 26px 50px -36px rgba(15,26,51,.45);max-width:860px}
+.sim-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;background:var(--ink);color:#fff;font-weight:700;font-size:.92rem}
+.sim-top .tm{font:800 1.05rem var(--display);font-variant-numeric:tabular-nums}
+.sim-top .tm.low{color:#ff9a9a}
+.sim-prog{height:4px;background:var(--line)}
+.sim-prog i{display:block;height:100%;width:0;background:var(--red);transition:width .3s ease}
+.sim-body{padding:20px 16px 6px;min-height:330px}
+.sim-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px 18px}
+.sim-foot span{color:var(--muted);font-size:.92rem;font-weight:600}
+.task{font-size:.9rem;font-weight:700;color:var(--blue)}
+.instr{font:800 1.2rem/1.25 var(--display);margin-top:4px}
+.passage{margin-top:14px;padding:16px;border-radius:12px;background:var(--soft);line-height:1.75}
+.passage b.t{display:block;font-family:var(--display);margin-bottom:6px}
+.gapw{white-space:nowrap}
+.gap{font:inherit;color:var(--blue);font-weight:700;border:0;border-bottom:2px solid var(--blue);background:#fff;border-radius:4px 4px 0 0;padding:0 3px;margin-left:1px;height:1.55em}
+.gap:focus{outline:none;background:var(--blue-soft)}
+.q{margin-top:20px}
+.q > p{font-weight:700}
+.opts{display:grid;gap:8px;margin-top:10px}
+.opts button{min-height:50px;padding:8px 16px;text-align:left;border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);font:600 1.02rem/1.35 var(--body);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.opts button[aria-pressed="true"]{border-color:var(--blue);background:var(--blue-soft);color:var(--blue);font-weight:700}
+.said{margin-top:14px;padding:14px 16px;border-radius:12px;background:var(--soft);font-weight:600}
+.line{display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start;min-height:64px;margin-top:14px;padding:10px;border:2px dashed var(--line);border-radius:12px}
+.line:empty::before{content:"Kelimelere dokunarak cümleyi kur";color:var(--muted);font-size:.95rem;align-self:center;padding:0 6px}
+.pool{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{min-height:44px;padding:0 14px;border:2px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);font:700 1.02rem var(--body);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.line .chip{border-color:var(--blue);background:var(--blue-soft);color:var(--blue)}
+.play{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 20px;margin-top:14px;border-radius:999px;border:2px solid var(--ink);background:#fff;color:var(--ink);font:700 1.02rem var(--body);cursor:pointer}
+.play::before{content:"";border-left:13px solid var(--ink);border-top:8px solid transparent;border-bottom:8px solid transparent}
+.tiny{color:var(--muted);font-size:.88rem;margin-top:8px}
+.start h3{font-size:1.5rem;letter-spacing:-.02em}
+.start ul{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.start li{display:grid;grid-template-columns:86px 1fr;gap:10px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.start li b{font-family:var(--display)}
+.start li span{color:var(--muted)}
+.start .btn{margin-top:20px;width:100%}
+@media (min-width:900px){.sim-body{padding:28px 30px 8px;min-height:380px}.sim-foot{padding:14px 30px 22px}.sim-top{padding:14px 30px}.start .btn{width:auto}}
+
+/* result */
+.res small{display:block;font-weight:700;color:var(--muted)}
+.res .big{font:900 4rem/1 var(--display);letter-spacing:-.04em;color:var(--blue);margin-top:4px}
+.res .big em{font-style:normal;font-size:1.6rem;color:var(--muted);letter-spacing:0}
+.rows{display:grid;gap:12px;margin-top:20px}
+.row{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:baseline}
+.row b{font-weight:700}
+.row span{font-variant-numeric:tabular-nums;font-weight:700}
+.row .barw{grid-column:1 / -1;height:8px;border-radius:4px;background:var(--line);overflow:hidden}
+.row .barw i{display:block;height:100%;border-radius:4px;background:var(--blue)}
+.row.weak .barw i{background:var(--red)}
+.say{margin-top:18px;font:700 1.45rem/1.25 var(--hand);color:var(--blue)}
+.res .note{margin-top:12px;color:var(--muted);font-size:.95rem}
+.res .btn{margin-top:18px;width:100%}
+.again{display:block;margin:8px auto 0;min-height:44px;background:none;border:0;color:var(--blue);font:700 .98rem var(--body);cursor:pointer}
+.review{margin-top:22px;border-top:1px solid var(--line)}
+.review summary{display:flex;justify-content:space-between;align-items:center;min-height:56px;font-weight:700;cursor:pointer;list-style:none}
+.review summary::-webkit-details-marker{display:none}
+.review summary::after{content:"+";font:800 1.5rem/1 var(--display);color:var(--blue)}
+.review[open] summary::after{content:"–"}
+.rv{padding:12px 0;border-top:1px solid var(--line)}
+.rv .k{font-size:.86rem;font-weight:700;color:var(--muted)}
+.rv .a{font-weight:700}
+.rv .a.no{color:var(--red)}
+.rv .a.yes{color:var(--green)}
+.rv .w{color:var(--muted);font-size:.96rem}
+@media (min-width:900px){.res .btn{width:auto}.again{display:inline-block;margin:0 0 0 14px}}
+
+/* what changed */
+.chg{margin-top:26px;max-width:880px;border-top:2px solid var(--ink)}
+.chg div{display:grid;gap:4px;padding:16px 0;border-bottom:1px solid var(--line)}
+.chg b{font-family:var(--display)}
+.chg .old{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--red)}
+.chg .new{font-weight:600}
+.types{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.types span{padding:6px 12px;border-radius:999px;background:var(--soft);border:1px solid var(--line);font-size:.92rem;font-weight:600}
+.src{margin-top:14px;color:var(--muted);font-size:.9rem;max-width:70ch}
+@media (min-width:800px){.chg div{grid-template-columns:170px 1fr 1.4fr;gap:24px;align-items:baseline}}
+
+/* program */
+.prog{background:var(--soft)}
+.prog-grid{display:grid;gap:30px}
+.prog-grid > div{min-width:0}
+.person{display:grid;grid-template-columns:52px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--line)}
+.person:last-child{border-bottom:1px solid var(--line)}
+.who{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff;font:800 1rem var(--display)}
+.who.t{background:var(--blue)}.who.p{background:var(--red)}
+.person p{color:var(--muted);margin-top:6px}
+.people{margin-top:26px}
+.cal{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 26px 50px -36px rgba(15,26,51,.45)}
+.cal-h{padding:16px 18px;border-bottom:1px solid var(--line);background:#fff}
+.cal-h b{display:block;font:800 1.1rem var(--display)}
+.cal-h span{color:var(--muted);font-size:.93rem}
+.cal-r{display:grid;grid-template-columns:62px 1fr;gap:14px;padding:15px 18px;border-bottom:1px solid var(--line)}
+.cal-r:last-child{border-bottom:0}
+.cal-r > b{font:800 1.02rem var(--display)}
+.cal-r div b{display:block}
+.cal-r div span{color:var(--muted);font-size:.94rem}
+.price{margin-top:22px;padding:20px;border-radius:16px;background:var(--ink);color:#fff;display:grid;gap:14px}
+.price small{display:block;color:#a9b3cb;font-weight:600}
+.price .p{font:900 2.2rem/1 var(--display);letter-spacing:-.02em;margin-top:2px}
+.price .p em{font-style:normal;font-size:1rem;font-weight:600;color:#a9b3cb;letter-spacing:0}
+.price p{color:#d5dbea;font-size:.96rem}
+.price .btn{background:#fff;border-color:#fff;color:var(--ink)}
+@media (min-width:900px){.prog-grid{grid-template-columns:1fr 1fr;gap:72px;align-items:start}}
+
+/* contact */
+.contact-grid{display:grid;gap:26px}
+.contact-grid > div{min-width:0}
+.contact .copy p{color:var(--muted);margin-top:14px;max-width:44ch}
+form{display:grid;gap:16px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 20px;box-shadow:0 26px 50px -36px rgba(15,26,51,.45)}
+label{display:grid;gap:6px;font-weight:700;font-size:.96rem}
+input:not(.gap),select{width:100%;min-height:52px;padding:0 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);font:400 1.06rem var(--body)}
+input:not(.gap):focus,select:focus{border-color:var(--blue);outline:none;box-shadow:0 0 0 3px var(--blue-soft)}
+.row2{display:grid;gap:16px}
+.row2 > label{min-width:0}
+.check{display:flex;gap:12px;align-items:flex-start;font-weight:400;font-size:.92rem;color:var(--muted)}
+.check input{width:22px;min-height:22px;height:22px;flex:none;margin:1px 0 0;accent-color:var(--blue);padding:0}
+.qnote{font-weight:700;color:var(--blue);font-size:.96rem}
+.err{color:var(--red);font-weight:700;font-size:.95rem}
+#ok{background:var(--blue-soft);border-radius:12px;padding:16px}
+form .btn{width:100%}
+@media (min-width:900px){.contact-grid{grid-template-columns:.85fr 1.15fr;gap:80px}form{padding:30px}.row2{grid-template-columns:1fr 1fr}form .btn{width:auto;justify-self:start}}
+
+footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+.foot{display:grid;gap:14px;padding-block:32px calc(32px + env(safe-area-inset-bottom,0px))}
+.foot p{max-width:80ch}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap bar">
+    <a class="logo" href="../" aria-label="Duet English ana sayfa"><span class="mk" aria-hidden="true"></span><b>duet</b><span class="sub">TOEFL</span></a>
+    <button class="burger" id="burger" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+    <nav id="menu" aria-label="Ana menü">
+      <a class="l" href="#deneme">Mini deneme</a>
+      <a class="l" href="#degisen">Ne değişti</a>
+      <a class="l" href="#program">Program</a>
+      <a class="l" href="../#programlar">Diğer programlar</a>
+      <a class="btn" href="#iletisim">Görüşme al</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="kick">yeni format, Ocak 2026</span>
+    <h1>TOEFL değişti. Hazırlığın da değişsin.</h1>
+    <p class="sub">Puan artık 1 ile 6 arasında, sorular seviyene göre zorlaşıyor ve yeni görev tipleri var. Eski kitaplar bu sınavı anlatmıyor. Yeni soruları önce 8 dakikalık ücretsiz mini denemede gör.</p>
+    <div class="cta">
+      <a class="btn" href="#deneme">Mini denemeyi başlat</a>
+      <a class="btn alt" href="#program">Programı gör</a>
+    </div>
+    <ul class="facts">
+      <li><b>1–6</b><span>yeni puan ölçeği</span></li>
+      <li><b>~1,5 saat</b><span>yaklaşık sınav süresi</span></li>
+      <li><b>72 saat</b><span>içinde sonuç</span></li>
+      <li><b>4 bölüm</b><span>okuma, dinleme, yazma, konuşma</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="test sec" id="deneme">
+  <div class="wrap">
+    <h2>Ücretsiz mini deneme</h2>
+    <p class="intro">Yeni formatın beş görev tipinden örnek sorular. Sonunda hangi görevde puan kaybettiğini ve nedenini Türkçe görürsün.</p>
+    <div class="sim" id="sim">
+      <div class="sim-top"><span id="simSec">Duet mini deneme</span><span class="tm" id="simTm">08:00</span></div>
+      <div class="sim-prog"><i id="simBar"></i></div>
+      <div class="sim-body" id="simBody">
+        <noscript>Mini denemeyi çözmek için tarayıcında JavaScript açık olmalı.</noscript>
+      </div>
+      <div class="sim-foot" id="simFoot" hidden><span id="simStep"></span><button class="btn" id="simNext" type="button">Sonraki</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="degisen">
+  <div class="wrap">
+    <h2>Ne değişti?</h2>
+    <div class="chg">
+      <div><b>Puan</b><span class="old">0–120</span><span class="new">1 ile 6 arası, yarım puanlık adımlarla. İki yıl boyunca eski ölçekteki karşılığı da raporda yazıyor.</span></div>
+      <div><b>Okuma ve dinleme</b><span class="old">Herkese aynı sorular</span><span class="new">Bölümün ortasında, o ana kadarki cevaplarına göre kolaylaşıyor ya da zorlaşıyor.</span></div>
+      <div><b>Süre</b><span class="old">Yaklaşık 2 saat</span><span class="new">Yaklaşık bir buçuk saat.</span></div>
+      <div><b>Sonuç</b><span class="old">4–8 gün</span><span class="new">72 saat içinde.</span></div>
+      <div><b>Görevler</b><span class="old">Uzun akademik metin ve kompozisyon ağırlıklı</span>
+        <span class="new">Kısa ve günlük hayata yakın yeni görevler:
+          <span class="types"><span>Complete the Words</span><span>Read in Daily Life</span><span>Listen and Choose a Response</span><span>Build a Sentence</span><span>Write an Email</span><span>Listen and Repeat</span><span>Take an Interview</span></span>
+        </span>
+      </div>
+    </div>
+    <p class="src">Soru sayıları ve kesin süreler için ETS'nin resmi TOEFL sayfasına bak. Buradaki özet, ETS duyurusu ve yayımlanmış hazırlık rehberlerinden derlendi.</p>
+  </div>
+</section>
+
+<section class="prog sec" id="program">
+  <div class="wrap prog-grid">
+    <div>
+      <h2>Nasıl hazırlıyoruz</h2>
+      <p class="intro">Duet'te iki kişiyle çalışırsın. TOEFL'da bu ikisinin işi net ayrılıyor.</p>
+      <div class="people">
+        <div class="person"><span class="who t" aria-hidden="true">TR</span><div><h3>Türk hocan</h3><p>Her görev tipinin mantığını ve zaman planını Türkçe anlatır. Yazdığın e-posta ve tartışma yazılarına her hafta yazılı geri bildirim verir. Deneme sonuçlarından hangi görevde puan kaybettiğini çıkarır.</p></div></div>
+        <div class="person"><span class="who p" aria-hidden="true">EN</span><div><h3>Konuşma partnerin</h3><p>Ana dili İngilizce. Listen and Repeat ve Take an Interview görevlerini süre tutarak prova ettirir, telaffuz ve akıcılık notlarını hocana geçer.</p></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="cal">
+        <div class="cal-h"><b>Örnek bir hafta</b><span>TOEFL paketi</span></div>
+        <div class="cal-r"><b>Salı</b><div><b>Türk hocan, 60 dakika</b><span>Okuma ve dinleme görevleri</span></div></div>
+        <div class="cal-r"><b>Çarş.</b><div><b>Yazma görevi</b><span>Evde yazarsın, 48 saat içinde yazılı geri bildirim</span></div></div>
+        <div class="cal-r"><b>Perş.</b><div><b>Türk hocan, 60 dakika</b><span>Yazma ve konuşma stratejisi</span></div></div>
+        <div class="cal-r"><b>Cmt.</b><div><b>Konuşma partnerin, 30 dakika</b><span>Süre tutarak konuşma provası</span></div></div>
+        <div class="cal-r"><b>Ay sonu</b><div><b>Tam deneme</b><span>Görev tipine göre sonuç ve gelecek ayın planı</span></div></div>
+      </div>
+      <div class="price">
+        <div><small>TOEFL paketi</small><div class="p num">7.900 TL <em>/ ay</em></div></div>
+        <p>Aylık ödersin, taahhüt yok. Bırakmak istediğin ay bize yazman yeterli. Puan garantisi vermiyoruz; her ay nerede olduğunu açıkça yazıyoruz.</p>
+        <a class="btn" href="#iletisim">Ücretsiz görüşme al</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact sec" id="iletisim">
+  <div class="wrap contact-grid">
+    <div class="copy">
+      <h2>Ücretsiz TOEFL görüşmesi</h2>
+      <p>Bilgilerini bırak, aynı gün hocalarımızdan biri seni arasın. Hedef puanına ve sınav tarihine göre bir plan çıkarırız. Sonunda kayıt olmak zorunda değilsin.</p>
+    </div>
+    <div>
+      <form id="f" novalidate>
+        <label for="ad">Adın soyadın<input id="ad" name="ad" autocomplete="name"></label>
+        <label for="tel">Telefonun<input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="05xx xxx xx xx"></label>
+        <div class="row2">
+          <label for="hedef">Hedef puanın
+            <select id="hedef" name="hedef">
+              <option>Henüz bilmiyorum</option>
+              <option>4 ve altı</option>
+              <option>4,5</option>
+              <option>5</option>
+              <option>5,5 ve üstü</option>
+            </select>
+          </label>
+          <label for="tarih">Sınava ne zaman gireceksin?
+            <select id="tarih" name="tarih">
+              <option>Tarih almadım</option>
+              <option>1 ay içinde</option>
+              <option>1–3 ay içinde</option>
+              <option>3 aydan sonra</option>
+            </select>
+          </label>
+        </div>
+        <p class="qnote" id="qnote" hidden></p>
+        <label class="check" for="kvkk"><input type="checkbox" id="kvkk" name="kvkk"><span>Bilgilerimin görüşme için kullanılmasını kabul ediyorum. KVKK aydınlatma metnini okudum.</span></label>
+        <p class="err" id="err" role="alert" hidden></p>
+        <button class="btn" type="submit">Beni arayın</button>
+        <p id="ok" hidden></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="logo" href="../" aria-label="Duet English ana sayfa"><span class="mk" aria-hidden="true"></span><b>duet</b></a>
+    <p>TOEFL ve TOEFL iBT, ETS'nin tescilli markalarıdır. Duet English'in ETS ile bir bağı yoktur ve bu sayfa ETS tarafından onaylanmamıştır. Mini denemedeki bütün sorular Duet tarafından yazılmıştır.</p>
+    <p>© 2026 Duet English · <a href="../">Ana sayfa</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var all = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+
+  /* menu */
+  var hdr = $("hdr"), burger = $("burger");
+  function setMenu(o){ hdr.classList.toggle("open", o); burger.setAttribute("aria-expanded", o ? "true" : "false"); burger.setAttribute("aria-label", o ? "Menüyü kapat" : "Menüyü aç"); }
+  burger.addEventListener("click", function(){ setMenu(!hdr.classList.contains("open")); });
+  all("#menu a").forEach(function(a){ a.addEventListener("click", function(){ setMenu(false); }); });
+
+  /* mini deneme: bütün içerik Duet tarafından yazıldı */
+  var canSpeak = "speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
+  var STEPS = [
+    {type:"words", sec:"Reading", name:"Complete the Words", cat:"words",
+      instr:"Eksik harfleri tamamla.",
+      parts:["Many universities now record their lectures so that students can watch them again later. This is ",
+        {p:"espe", a:"cially"}, " useful before exams, when ", {p:"stu", a:"dents"}, " need to ", {p:"rev", a:"iew"}, " difficult topics. However, some ",
+        {p:"prof", a:"essors"}, " worry that fewer people will ", {p:"att", a:"end"}, " class in ", {p:"per", a:"son"}, ". Recent ",
+        {p:"stud", a:"ies"}, " suggest that the ", {p:"eff", a:"ect"}, " is small: most students still ", {p:"pre", a:"fer"},
+        " to be in the room, where they can ask ", {p:"ques", a:"tions"}, " directly."]},
+    {type:"mcq", sec:"Reading", name:"Read in Daily Life", cat:"daily",
+      instr:"Duyuruyu oku ve soruları cevapla.", title:"Library notice",
+      text:"From Monday 3 March, the second floor will be closed for repairs for two weeks. Books from that floor can still be requested at the front desk and will be ready within one hour. Group study rooms on the first floor stay open, but they must now be booked online at least a day in advance. Printing has moved to the ground floor, next to the café.",
+      qs:[
+        {q:"What should a student do to borrow a book kept on the second floor?", o:["Wait until the repairs are finished","Ask for it at the front desk","Book it online a day before","Go to the ground floor café"], a:1, why:"\"can still be requested at the front desk\": kitap ön masadan istenir."},
+        {q:"What has changed about the group study rooms?", o:["They have moved to the ground floor","They are closed for two weeks","They now need to be reserved in advance","They can be used for one hour only"], a:2, why:"\"must now be booked online at least a day in advance\": artık önceden rezervasyon gerekiyor. \"One hour\" kitaplar için söylenmiş, çeldirici."}
+      ]},
+    {type:"mcq", sec:"Reading", name:"Read an Academic Passage", cat:"acad",
+      instr:"Metni oku ve soruları cevapla.", title:"Urban heat islands",
+      text:"Cities are often several degrees warmer than the countryside around them, a pattern known as the urban heat island effect. The main cause is the materials cities are built from. Asphalt and concrete absorb sunlight during the day and release the stored heat slowly at night, so urban temperatures stay high even after sunset. Vegetation works in the opposite way: trees provide shade, and water evaporating from their leaves cools the surrounding air. Because cities replace vegetation with hard surfaces, they lose this natural cooling. Researchers have tested several responses. Planting trees along streets is effective but takes years to show results. Painting roofs white, by contrast, lowers a building's temperature almost immediately, although it has little effect on the street below. For this reason, many planners now recommend combining both approaches rather than choosing one.",
+      qs:[
+        {q:"According to the passage, what is the main cause of the urban heat island effect?", o:["The number of vehicles in cities","Building materials that store heat","A lack of wind between buildings","The size of the urban population"], a:1, why:"\"The main cause is the materials cities are built from\": asfalt ve beton ısıyı depoluyor."},
+        {q:"The word \"release\" in the passage is closest in meaning to", o:["give off","hold","reduce","reflect"], a:0, why:"release: salmak, dışarı vermek. Depolanan ısı gece yavaşça salınıyor."},
+        {q:"Why do many planners recommend combining tree planting and white roofs?", o:["Each one alone is too expensive","Trees work slowly, and white roofs do not cool the street","White roofs damage nearby trees","Together they remove the need for hard surfaces"], a:1, why:"Ağaçlar yıllar alıyor, beyaz çatı sokağı serinletmiyor. İkisinin eksiği birbirini tamamlıyor."}
+      ]},
+    {type:"build", sec:"Writing", name:"Build a Sentence", cat:"build", said:"Did you finish the report?",
+      words:["sent","already","the","I","to","have","manager","it"], ans:["I have already sent it to the manager","I have sent it to the manager already"],
+      why:"already, have ile fiilin arasına girer: have already sent."},
+    {type:"build", sec:"Writing", name:"Build a Sentence", cat:"build", said:"Why was the seminar cancelled?",
+      words:["flight","could","in","The speaker","get","time","not","a"], ans:["The speaker could not get a flight in time"],
+      why:"could not'tan sonra fiil yalın gelir: could not get. in time: vaktinde."},
+    {type:"build", sec:"Writing", name:"Build a Sentence", cat:"build", said:"I can't find the chemistry lab.",
+      words:["building","know","it","Do you","which","is","in"], ans:["Do you know which building it is in","Do you know in which building it is"],
+      why:"Dolaylı soruda özne fiilden önce gelir: it is. Türkler en çok burada \"is it\" yazar."},
+    {type:"listen", sec:"Listening", name:"Listen and Choose a Response", cat:"listen", audio:"Would you mind if I opened the window?",
+      o:["Not at all, go ahead.","Yes, I opened it this morning.","The window is on the left."], a:0,
+      why:"\"Would you mind...?\" sorusunda \"Not at all\" izin vermektir. \"Yes\" dersen \"rahatsız olurum\" demiş olursun."},
+    {type:"listen", sec:"Listening", name:"Listen and Choose a Response", cat:"listen", audio:"How long have you been waiting for the bus?",
+      o:["By bus, usually.","About twenty minutes.","It is a long bus."], a:1,
+      why:"How long süre sorar. Cevap bir süre olmalı: about twenty minutes."}
+  ];
+  if (!canSpeak) STEPS = STEPS.filter(function(s){ return s.type !== "listen"; });
+  var CATS = [["words","Complete the Words"],["daily","Read in Daily Life"],["acad","Read an Academic Passage"],["build","Build a Sentence"],["listen","Listen and Choose a Response"]];
+  var TOTAL_SEC = 480;
+  var body = $("simBody"), foot = $("simFoot"), next = $("simNext"), si = -1, ans = [], left = TOTAL_SEC, timer = null;
+
+  function fmt(t){ var m = Math.floor(t / 60), s = t % 60; return (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s; }
+  function head(s){ return '<p class="task">' + esc(s.sec) + ' · ' + esc(s.name) + '</p>'; }
+
+  function drawStart(){
+    si = -1; ans = []; left = TOTAL_SEC; clearInterval(timer);
+    $("simSec").textContent = "Duet mini deneme"; $("simTm").textContent = fmt(left); $("simTm").classList.remove("low");
+    $("simBar").style.width = "0%"; foot.hidden = true;
+    body.innerHTML = '<div class="start"><h3>8 dakika, ' + STEPS.length + ' ekran</h3><ul>' +
+      '<li><b>Reading</b><span>Complete the Words, Read in Daily Life, Read an Academic Passage</span></li>' +
+      '<li><b>Writing</b><span>Build a Sentence</span></li>' +
+      (canSpeak ? '<li><b>Listening</b><span>Listen and Choose a Response. Sesini açık tut.</span></li>' : '') +
+      '</ul><p class="tiny">Gerçek sınavdaki gibi, cevapların doğru olup olmadığını sonunda görürsün. Süre bitince deneme kendiliğinden biter.</p>' +
+      '<button class="btn" type="button" id="simGo">Başlat</button></div>';
+  }
+
+  function draw(){
+    var s = STEPS[si], h = head(s);
+    $("simSec").textContent = s.sec;
+    $("simBar").style.width = (si / STEPS.length * 100) + "%";
+    $("simStep").textContent = (si + 1) + " / " + STEPS.length;
+    next.textContent = si + 1 < STEPS.length ? "Sonraki" : "Bitir";
+    foot.hidden = false;
+    if (s.type === "words") {
+      var gi = 0;
+      h += '<p class="instr">' + esc(s.instr) + '</p><p class="passage">' + s.parts.map(function(p){
+        if (typeof p === "string") return esc(p);
+        var n = p.a.length;
+        return '<span class="gapw">' + esc(p.p) + '<input class="gap" data-g="' + (gi++) + '" maxlength="' + (n + 2) + '" style="width:' + (n * 0.56 + 0.7).toFixed(2) + 'em" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" aria-label="' + esc(p.p) + ' ile başlayan kelimenin devamı"></span>';
+      }).join("") + '</p>';
+    } else if (s.type === "mcq") {
+      h += '<p class="instr">' + esc(s.instr) + '</p><div class="passage"><b class="t">' + esc(s.title) + '</b>' + esc(s.text) + '</div>' +
+        s.qs.map(function(q, qi){ return '<div class="q"><p>' + (qi + 1) + '. ' + esc(q.q) + '</p><div class="opts" data-q="' + qi + '">' + q.o.map(function(o, oi){ return '<button type="button" data-o="' + oi + '" aria-pressed="false">' + esc(o) + '</button>'; }).join("") + '</div></div>'; }).join("");
+    } else if (s.type === "build") {
+      h += '<p class="instr">Kelimeleri sıraya koyarak cevabı kur.</p><p class="said">' + esc(s.said) + '</p><div class="line" id="bLine"></div><div class="pool" id="bPool">' +
+        s.words.map(function(w, wi){ return '<button type="button" class="chip" data-w="' + wi + '">' + esc(w) + '</button>'; }).join("") + '</div>';
+    } else {
+      h += '<p class="instr">Dinle ve en uygun cevabı seç.</p><button type="button" class="play" id="lPlay">Dinle</button><p class="tiny">Cümle ekranda yazmaz. Burada tarayıcının sesiyle okunur, gerçek sınavda kayıt dinlersin.</p>' +
+        '<div class="q"><div class="opts" data-q="0">' + s.o.map(function(o, oi){ return '<button type="button" data-o="' + oi + '" aria-pressed="false">' + esc(o) + '</button>'; }).join("") + '</div></div>';
+    }
+    body.innerHTML = h;
+    $("sim").scrollIntoView({block:"nearest"});
+  }
+
+  function collect(){
+    var s = STEPS[si];
+    if (s.type === "words") ans[si] = all(".gap", body).map(function(i){ return i.value.trim().toLowerCase(); });
+    else if (s.type === "build") ans[si] = all("#bLine .chip", body).map(function(c){ return s.words[+c.getAttribute("data-w")]; }).join(" ");
+    else ans[si] = all(".opts", body).map(function(g){ var b = g.querySelector('[aria-pressed="true"]'); return b ? +b.getAttribute("data-o") : -1; });
+  }
+
+  function finish(){
+    clearInterval(timer); if (canSpeak) window.speechSynthesis.cancel();
+    if (si >= 0 && si < STEPS.length) collect();
+    var sc = {}, mx = {}, rv = [];
+    CATS.forEach(function(c){ sc[c[0]] = 0; mx[c[0]] = 0; });
+    STEPS.forEach(function(s, i){
+      var a = ans[i];
+      if (s.type === "words") {
+        var gaps = s.parts.filter(function(p){ return typeof p !== "string"; });
+        gaps.forEach(function(g, k){ mx.words++; var ok = a && a[k] === g.a; if (ok) sc.words++; else rv.push({k:s.name, ok:false, a:g.p + g.a, y:a && a[k] ? g.p + a[k] : "boş", w:""}); });
+      } else if (s.type === "mcq") {
+        s.qs.forEach(function(q, k){ mx[s.cat]++; var ok = a && a[k] === q.a; if (ok) sc[s.cat]++; rv.push({k:s.name, ok:ok, a:q.o[q.a], y:a && a[k] >= 0 ? q.o[a[k]] : "boş", w:q.why}); });
+      } else if (s.type === "build") {
+        mx.build++; var okb = !!a && s.ans.indexOf(a) >= 0; if (okb) sc.build++;
+        rv.push({k:s.name, ok:okb, a:s.ans[0], y:a || "boş", w:s.why});
+      } else {
+        mx.listen++; var okl = a && a[0] === s.a; if (okl) sc.listen++;
+        rv.push({k:s.name + ': "' + s.audio + '"', ok:okl, a:s.o[s.a], y:a && a[0] >= 0 ? s.o[a[0]] : "boş", w:s.why});
+      }
+    });
+    var tot = 0, max = 0, weak = null;
+    CATS.forEach(function(c){ if (!mx[c[0]]) return; tot += sc[c[0]]; max += mx[c[0]]; var r = sc[c[0]] / mx[c[0]]; if (r < 1 && (!weak || r < weak.r)) weak = {r:r, n:c[1]}; });
+    $("simSec").textContent = "Sonuç"; $("simBar").style.width = "100%"; foot.hidden = true;
+    var wrong = rv.filter(function(x){ return !x.ok; });
+    body.innerHTML = '<div class="res"><small>Mini deneme sonucun</small><div class="big num">' + tot + ' <em>/ ' + max + '</em></div>' +
+      '<div class="rows">' + CATS.filter(function(c){ return mx[c[0]]; }).map(function(c){ var r = sc[c[0]] / mx[c[0]]; return '<div class="row' + (weak && weak.n === c[1] ? ' weak' : '') + '"><b>' + esc(c[1]) + '</b><span>' + sc[c[0]] + ' / ' + mx[c[0]] + '</span><div class="barw"><i style="width:' + Math.max(r * 100, 3) + '%"></i></div></div>'; }).join("") + '</div>' +
+      '<p class="say">' + (weak ? 'En çok puan kaybettiğin görev: ' + esc(weak.n) + '.' : 'Hepsi doğru. Sıradaki adım yazma ve konuşma.') + '</p>' +
+      '<p class="note">Bu mini deneme TOEFL puan tahmini vermez. Gerçek sınavda yazma ve konuşma da var; onları görüşmede birlikte değerlendiriyoruz.</p>' +
+      '<a class="btn" href="#iletisim">Sonucumla görüşme al</a><button type="button" class="again" id="simAgain">Tekrar çöz</button>' +
+      (wrong.length ? '<details class="review"><summary>Yanlışlarım ve açıklamaları (' + wrong.length + ')</summary>' + wrong.map(function(x){
+        return '<div class="rv"><p class="k">' + esc(x.k) + '</p><p class="a no">Senin cevabın: ' + esc(x.y) + '</p><p class="a yes">Doğrusu: ' + esc(x.a) + '</p>' + (x.w ? '<p class="w">' + esc(x.w) + '</p>' : '') + '</div>'; }).join("") + '</details>' : '') + '</div>';
+    $("qnote").textContent = "Mini deneme sonucun: " + tot + " / " + max + (weak ? ", zayıf görev: " + weak.n : "");
+    $("qnote").hidden = false;
+    si = STEPS.length;
+  }
+
+  body.addEventListener("click", function(ev){
+    var b = ev.target.closest("button"); if (!b) return;
+    if (b.id === "simGo") {
+      si = 0; draw();
+      timer = setInterval(function(){ left--; $("simTm").textContent = fmt(Math.max(left, 0)); if (left <= 60) $("simTm").classList.add("low"); if (left <= 0) finish(); }, 1000);
+      return;
+    }
+    if (b.id === "simAgain") { drawStart(); return; }
+    if (b.id === "lPlay") {
+      var u = new SpeechSynthesisUtterance(STEPS[si].audio); u.lang = "en-US"; u.rate = 0.95;
+      window.speechSynthesis.cancel(); window.speechSynthesis.speak(u); b.textContent = "Tekrar dinle"; return;
+    }
+    if (b.hasAttribute("data-o")) { all("button", b.parentNode).forEach(function(x){ x.setAttribute("aria-pressed", x === b ? "true" : "false"); }); return; }
+    if (b.classList.contains("chip")) { (b.parentNode.id === "bPool" ? $("bLine") : $("bPool")).appendChild(b); }
+  });
+  next.addEventListener("click", function(){
+    if (canSpeak) window.speechSynthesis.cancel();
+    collect(); si++;
+    if (si < STEPS.length) draw(); else finish();
+  });
+  drawStart();
+
+  /* form */
+  $("f").addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var ad = $("ad").value.trim(), tel = $("tel").value.replace(/\D/g, ""), msg = "";
+    if (ad.length < 3) msg = "Adını ve soyadını yaz.";
+    else if (tel.length < 10) msg = "Telefon numaran en az 10 haneli olmalı.";
+    else if (!$("kvkk").checked) msg = "Devam etmek için KVKK onayını işaretle.";
+    $("err").textContent = msg; $("err").hidden = !msg; $("ok").hidden = !!msg;
+    if (!msg) $("ok").textContent = "Teşekkürler " + ad.split(" ")[0] + ". Site şu an önizleme aşamasında, bu yüzden başvurun kaydedilmedi. Kayıtlar açıldığında bu form doğrudan hocalarımıza ulaşacak.";
+  });
+})();
+</script>
+</body>
+</html>
